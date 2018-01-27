@@ -1,0 +1,21 @@
+.style1{
+    margin: 0 auto; 
+    border: 1px solid #bbb; 
+    padding: 5px; 
+    background-color: #eee; 
+    line-height: 1.5em;
+}
+img {
+    width: 300px;
+    height: 200px;
+}
+.current{
+    color:cornflowerblue;
+    border-color:darkgray;
+}
+.smaller{
+    font-size: 12px;
+}
+#space{
+    margin-bottom: 50px;
+}
