@@ -1,0 +1,14 @@
+header, main, footer {
+    text-align: center;
+    
+}
+
+main{
+    background: #cce8ff;
+    color: #000000;
+}
+
+footer{
+    background: #0075d5;
+    color: azure;
+}
