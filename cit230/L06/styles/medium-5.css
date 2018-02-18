@@ -3,7 +3,7 @@
 
     nav button { display:none; }  /* hamburger button does not need to be shown */
 
-    ul {
+    nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -11,25 +11,25 @@
         background-color: #48a4ff;
     }
 
-    li {
+    nav ul li {
         float: left;
     }
 
-    li a {
+    nav ul li a {
         display: block;
-        color: black;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        border: none;
     }
     
     /*link hover*/
-    li a:hover {
+    nav ul li a:hover {
         background-color: #b3d9ff;
     }
+    nav ul.hide{display: block;}
     
-    
-    .current{text-align: left;}
+    .current{text-align:left;}
     
     .conditions{text-align: left;}
     
@@ -52,10 +52,11 @@
     .forecast table thead th{
         border: 1px solid black;
         background-color:#48a4ff;
+        padding: .5rem;
     }
 
     .forecast table td{
-        padding: 2.1%;
+        padding: .5rem;
         border: 1px solid black;
         background-color:#b3d9ff;
     }
