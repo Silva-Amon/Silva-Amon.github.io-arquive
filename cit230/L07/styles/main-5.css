@@ -99,9 +99,6 @@ nav ul li a:hover {
     width: 100%;
 
 }
-.Grid img:hover{
-    box-shadow: 5px 5px 10px gray;
-}
 
 main {
     display: flex;
