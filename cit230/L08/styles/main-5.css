@@ -91,6 +91,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
     padding-right:10px;
     padding-left:10px;
+    text-align: justify;
 
 }
 
@@ -106,6 +107,9 @@ main {
 }
 main h2 {
     text-align: center;
+    color: #48a4ff;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 main figure { 
