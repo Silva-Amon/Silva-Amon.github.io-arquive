@@ -1,0 +1,44 @@
+table, td, th{
+    border: 1px solid #b3b6bc;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table{
+    box-shadow: 7px 10px 10px #628ca6;
+    font-family: Ubuntu, sans-serif
+}
+
+thead th{
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: #7fb9c2;
+}
+
+thead td{
+    color: white;
+    font-weight: 700;
+    background-color: #628ca6;
+}
+
+td{
+    text-align: center;
+    background-color: #e7ffed;
+}
+
+ tbody tr:nth-child(odd) td{
+    background-color: #e7f0ed;
+}
+
+#color{
+    background-color: #628ca6;
+    color:white;
+}
+
+#blackfriday{
+    font-style: italic;
+}
+tfoot td{
+    font-size: 0.7rem;
+    background-color: #7fb9c2;
+}
