@@ -1,4 +1,4 @@
-table, td, th{
+table, td, th, caption{
     border: 1px solid #b3b6bc;
     border-collapse: collapse;
     padding: 5px;
@@ -9,13 +9,13 @@ table{
     font-family: Ubuntu, sans-serif
 }
 
-thead th{
+caption{
     font-weight: 700;
     font-size: 1.4rem;
     background-color: #7fb9c2;
 }
 
-thead td{
+th{
     color: white;
     font-weight: 700;
     background-color: #628ca6;
