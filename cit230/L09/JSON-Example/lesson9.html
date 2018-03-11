@@ -31,9 +31,9 @@
             request.send();
 
             request.onload = function() {
-                var superHeroes = request.response;
-                populateHeader(superHeroes);
-                showGames(superHeroes);
+                var games = request.response;
+                populateHeader(games);
+                showGames(games);
             }
 
             function populateHeader(jsonObj) {
