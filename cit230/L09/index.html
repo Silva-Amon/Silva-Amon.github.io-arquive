@@ -36,13 +36,19 @@
 
         <main id="mainPage">
             <article>
-
+                <div class=weather>
+                    <p>City: <span id="cityName"></span></p>
+                    <p>Weather: <span id="weather"></span></p>
+                    <p>Wind Speed: <span  id="wind"></span> m/h</p>
+                    <p>Actual Weather: <span id="temp"></span> &deg;F</p>
+                    <img id="w_icon" src="" alt="current weather">
+                </div>
             </article>
             <section id="sec1" class="mainSec">
 
             </section>
             <section id="sec2" class="mainSec">
-                
+
             </section>
             <section id="sec3" class="mainSec">
 
@@ -63,6 +69,7 @@
         <script src="scripts/getJSON.js">
 
         </script>
+        <script src="scripts/weatherJSON.js"></script>
 
     </body>
 </html>

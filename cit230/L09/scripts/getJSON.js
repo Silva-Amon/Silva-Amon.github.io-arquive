@@ -65,6 +65,7 @@
                 var para3 = document.createElement('p');
                 var listItem = document.createElement('ul');
                 var img = document.createElement('img');
+                
 
                 h2.textContent = json['towns'][0]['name'];
 
@@ -77,6 +78,7 @@
                 section1.appendChild(para1);
                 section1.appendChild(para2);
                 section1.appendChild(para3);
+                
 
                 var townsEvents = json['towns'][0]['events'];
 
@@ -89,6 +91,8 @@
                 img.setAttribute("src","img/galery/pexels-photo-164024-640-350.jpeg");
                 img.className = "mainImg";
                 section1.appendChild(img);
+                
+                
             }
             function fillSection2(json){
 
