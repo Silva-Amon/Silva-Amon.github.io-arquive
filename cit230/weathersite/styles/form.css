@@ -1,0 +1,66 @@
+/*-------------------------- Form Stuff --------------------------*/
+form{
+    margin: 1em 3%;
+}
+
+fieldset{
+    border: #b3d9ff 2px solid;
+    border-radius: .8em;
+}
+
+legend{
+    color: #48a4ff;
+    font-weight: bold;
+    margin-left: 6%;
+    padding: .5em;
+    font-size: 1.1em;
+}
+
+label{
+    display:block;
+    margin: .5em;
+}
+
+label span{
+    display: block;
+    font-size: .8em;
+    padding-top: .9em;
+    padding-bottom: .2em;
+}
+#ratingvalue{
+    margin-left: 5px;
+    display: inline;
+}
+label label{
+    display: inline;
+}
+/*--------- Form validation style ---------*/
+input:required~label:after{
+    content: "*";
+    color: #48a4ff;
+} 
+input:optional~label:after{
+    content: "(optional)";
+    color: #48a4ff;
+} 
+Input:not([type=”submit”]):valid:focus, textarea:valid:focus, select:valid:focus{
+    box-shadow: 0 0 10px rgba(51, 51, 255, 0.8);
+    outline:0;
+}
+Input:not([type=”submit”]):invalid:focus, textarea:invalid:focus, select:invalid:focus{
+    box-shadow: 0 0 10px rgba(255, 71, 71, 0.8);
+    outline:0;
+}
+
+
+.sentButton{
+    
+    -webkit-appearance: none; /*remove the apple mobile default setting for button*/
+    color: white;
+    font-weight:bold;
+    background-color:  #48a4ff;
+    border: 1px solid #48a4ff;
+    padding: 1%;
+    margin: 5% 0 1% 0;
+    
+}

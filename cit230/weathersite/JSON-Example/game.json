@@ -1,0 +1,26 @@
+{
+  "title" : "Cool Games",
+  "name" : "Amon Silva",
+  "class" : 230,
+
+  "game" : 
+	[
+		{
+		  "name" : "Tarzan",
+		  "platform" : "Playstation 4",
+		  "enterprise" : "The Jungle"
+		},
+		{
+		  "name" : "Toy Store 5",
+		  "platform" : "Xbox One",
+		  "enterprise" : "Pixar Games"
+		},
+		{
+		  "name" : "Power Ranger - The last ranger",
+		  "platform" : "Atari",
+		  "enterprise" : "Sony"
+		}
+		
+	]
+	
+}
