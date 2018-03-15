@@ -8,4 +8,4 @@ var f = 35.74 + 0.6215 * t - 35.75 *  Math.pow(windSpeed, 0.16) + 0.4275 * t * M
 
 var windFactor = Math.round(f*100)/100; //round to decimal places.
 
-alert("The wind chill factor is " + windFactor);
+document.getElementById("windChillF").innerHTML = " " + windFactor + " mph";

@@ -40,19 +40,19 @@
             <form target="_blank" action="thanks.html" method="get">
                 <fieldset>
                     <legend>Personal Information</legend>
-                    
+
                     <label><span>Full name</span> <input type="text" name="fullName" pattern="[a-zA-Z ]{5,}" required autofocus><label></label></label>
-                    
+
                     <label><span>Email</span> <input type="email" name="email" placeholder="someone@something.com"><label></label></label>
-                    
+
                     <label><span>Phone Number</span> <input type="tel" name="phone" required><label></label></label>
-                    
+
                     <label><span>Zip Code</span> <input type="number" name="zipCode" required><label></label></label>
                 </fieldset>
                 <fieldset>
                     <legend>Storm information</legend>
                     <label><span>Storm Date</span> <input type="date" name="date"><label></label></label>
-                    
+
                     <label><span>Storm Type</span> <input type="text" list="stormType" name="stormType">
                         <datalist id="stormType">
                             <option value="Flash Flood"></option>
@@ -63,24 +63,24 @@
                         </datalist>
                         <label></label>
                     </label>
-                    
+
                     <label><span>Storm Region (Rating 1 to 10)</span> <input type="range" id="rating" min="1" value="5" step="1" max="10" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)" name="stormRegionRate"><span id="ratingvalue"> 5</span></label>
                     <label>
-                    <span>Select the region</span>
-                    <select name="region">
-                        <option selected disabled>Select Region...</option>
-                        <option value="franklin">Franklin</option>
-                        <option value="greenville">Greenville</option>
-                        <option value="springfield">Springfield</option>
-                    </select>
+                        <span>Select the region</span>
+                        <select name="region">
+                            <option selected disabled>Select Region...</option>
+                            <option value="franklin">Franklin</option>
+                            <option value="greenville">Greenville</option>
+                            <option value="springfield">Springfield</option>
+                        </select>
                     </label>
-                    
-                    
+
+
                     <label><span>User In-danger Level</span></label>
                     <label>Yes <input type="radio" value="yes" name="userInDangerLevel"></label>
                     <label>No <input type="radio" value="no" name="userInDangerLevel">
                     </label>
-                    
+
                     <label><span>Additional Information or Comments</span><textarea name="addtionalInfor"></textarea><label></label></label>
                     <input type="submit" value="Send the storm information" class="sentButton">
                 </fieldset>
@@ -88,7 +88,11 @@
         </main>
         <footer>
             <aside>
-                Contact information placeholder
+                <p>The Weather City</p>
+                <p>123 Man St.</p>
+                <p>Franklin, MU, 85454</p>
+                <p>(999) 999 9999</p>
+                <p>contact@weathercity.com</p>
             </aside>
             <p class="footer-bar">&copy;2017 All Rights Reserved | Site Title | <span id="currentdate"></span></p>
         </footer>

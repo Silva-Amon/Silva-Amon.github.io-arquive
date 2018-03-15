@@ -125,6 +125,7 @@ nav ul li a:hover {
 
 }
 
+
 .mainSec{
     margin-left:10px;
     margin-right:10px;
@@ -140,7 +141,6 @@ main h2 {
     text-align: center;
     color: #48a4ff;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 main figure { 
@@ -161,6 +161,7 @@ section h3{
 }
 
 .current{
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -175,12 +176,13 @@ section h3{
 main section picture img {
 
     width: 50%;
-    margin:0 2% 1.5rem 2%;
+    margin: 0 2% 1.5rem 2%;
 
 }
 
 .forecast{display: none;}
 article {
+    margin-top: 20px;
     text-align: center;
 }
 article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
@@ -191,12 +193,22 @@ article p{
     margin-right: 10px;
 }
 
-footer {text-align: center;}
+footer {
+    margin-top:20px;
+    text-align: center;
+}
+
+footer aside p:first-of-type{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
 footer aside {
-    margin: 0px;
+    padding: 1px 0;
+    margin: 50px 0 0 0;
     background-color: #b3d9ff;
 }
 footer>p {
+    padding: 20px;
     margin: 0px;
     background-color: #48a4ff;    
 } /* This structure refers to p elements that are direct children of the footer element */
