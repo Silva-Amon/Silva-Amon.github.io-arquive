@@ -111,13 +111,7 @@ nav ul li a:hover {
 }
 #container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-
-}
-
-#container h3{
-    grid-column: 1/4;
+    grid-template-columns: 1fr;
 }
 
 .weather{

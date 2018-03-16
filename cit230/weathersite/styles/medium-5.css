@@ -47,6 +47,15 @@
     .Grid{
         grid-template-columns: 1fr 1fr;
     }
+    #container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #container h3{
+        grid-column: 1/4;
+    }
+
     nav button { display:none; }  /* hamburger button does not need to be shown */
 
     nav ul {
