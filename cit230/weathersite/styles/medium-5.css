@@ -1,24 +1,25 @@
 @media only screen and (min-width: 37.5em) {
     /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
 
-    header {
+    header a{
+        max-width: 470px;
         display: grid;
         grid-template-columns: 210px 1fr;
         grid-gap: 0 10px;
     }
 
-    header h1 {
+    header a h1 {
         font-size: 2rem;
         text-align: left;
     }
 
-    header .subheading {
+    header a .subheading {
         text-align: left;
         margin-left:25px;
 
     }
 
-    header img {
+    header a img {
         grid-row: 1/3;
         width:100%;
     }
