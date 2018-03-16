@@ -37,11 +37,11 @@ label .ast{
     display: inline;
 }
 /*--------- Form validation style ---------*/
-input:required~span:after{
+input:required~.ast:after{
     content: "*";
     color: #48a4ff;
 } 
-input:optional~span:after{
+input:optional~.ast:after{
     content: "(optional)";
     color: #48a4ff;
 } 
