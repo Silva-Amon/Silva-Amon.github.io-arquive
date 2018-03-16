@@ -46,11 +46,19 @@ input:optional~.ast:after{
     color: #48a4ff;
 } 
 
-input:not([type="submit"]):valid:focus{
+input:required~label:after{
+    content: "*";
+    color: #48a4ff;
+} 
+input:optional~label:after{
+    content: "(optional)";
+    color: #48a4ff;
+} 
+Input:not([type="submit"]):valid:focus, textarea:valid:focus, select:valid:focus{
     box-shadow: 0 0 10px rgba(51, 51, 255, 0.8);
     outline:0;
 }
-input:not([type="submit"]):invalid:focus{
+Input:not([type="submit"]):invalid:focus, textarea:invalid:focus, select:invalid:focus{
     box-shadow: 0 0 10px rgba(255, 71, 71, 0.8);
     outline:0;
 }
