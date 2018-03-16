@@ -1,6 +1,6 @@
 var weatherObject = new XMLHttpRequest();
 
-weatherObject.open('GET', 'http://api.wunderground.com/api/3a922c17c0b56de7/conditions/q/SC/Greenville.json', true);
+weatherObject.open('GET', 'http://api.wunderground.com/api/3a922c17c0b56de7/conditions/q/MN/Franklin.json', true);
 
 weatherObject.send();
 
@@ -13,5 +13,6 @@ weatherObject.onload = function() {
     document.getElementById('wind').innerHTML = weatherInfo.current_observation.wind_mph;
     document.getElementById('temp').innerHTML = weatherInfo.current_observation.temp_f;
     document.getElementById('w_icon').src = weatherInfo.current_observation.icon_url;
+    document.getElementById('prec').innerHTML = weatherInfo.current_observation.precip_1hr_in*100;
     
 }

@@ -1,6 +1,6 @@
 var high = parseFloat(document.getElementById("high").textContent); //getting high temp.
 var low = parseFloat(document.getElementById("low").textContent); //getting low temp.
-var windSpeed = parseFloat(document.getElementById("windSpeed").textContent); //getting the wind speed per hour.
+var windSpeed = parseFloat(document.getElementById("wind").textContent); //getting the wind speed per hour.
 
 var t = (high + low) / 2; //wind speed
 

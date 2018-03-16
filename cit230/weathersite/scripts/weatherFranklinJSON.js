@@ -13,5 +13,6 @@ weatherObject.onload = function() {
     document.getElementById('wind').innerHTML = weatherInfo.current_observation.wind_mph;
     document.getElementById('temp').innerHTML = weatherInfo.current_observation.temp_f;
     document.getElementById('w_icon').src = weatherInfo.current_observation.icon_url;
+    document.getElementById('prec').innerHTML = weatherInfo.current_observation.precip_1hr_in*100;
     
 }
