@@ -31,15 +31,17 @@ label span{
     margin-left: 5px;
     display: inline;
 }
-label label{
+label .ast{
+    font-size: 1em;
+    margin: .5em;
     display: inline;
 }
 /*--------- Form validation style ---------*/
-input:required~label:after{
+input:required~span:after{
     content: "*";
     color: #48a4ff;
 } 
-input:optional~label:after{
+input:optional~span:after{
     content: "(optional)";
     color: #48a4ff;
 } 
