@@ -14,5 +14,4 @@ weatherObject.onload = function() {
     document.getElementById('temp').innerHTML = weatherInfo.current_observation.temp_f;
     document.getElementById('w_icon').src = weatherInfo.current_observation.icon_url;
     
-    
 }
