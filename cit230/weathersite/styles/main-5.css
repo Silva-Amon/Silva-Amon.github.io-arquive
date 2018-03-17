@@ -93,7 +93,7 @@ nav ul li a:hover {
 .Grid{
     display: grid;
     align-items: center;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-rows: 1fr;
     margin-left: auto;
     margin-right: auto;
