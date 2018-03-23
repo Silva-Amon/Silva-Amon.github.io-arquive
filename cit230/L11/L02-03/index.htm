@@ -11,7 +11,7 @@
         <div class="container">
             <!-- Header Div containing the Logo & Navigation Links -->
             <div class="header">
-                <div class="logo"></div>
+                <div class="logo"  id="alcoveLogo"></div>
                 <div class="navbar">
                     <ul class="navigation">
                         <li><a href="#">About Us</a></li>
@@ -33,7 +33,7 @@
                         <br>
                         <div class="FormFieldHolder">
                             <div class="labelHolder"><label>Full Name</label></div>
-                            <div class="FieldHolder"><input type="text"></div>
+                            <div class="FieldHolder"><input type="text" name="nameVal"></div>
                         </div>
 
                         <div class="FormFieldHolder">
@@ -43,7 +43,7 @@
 
                         <div class="FormFieldHolder">
                             <div class="labelHolder"><label>Phone</label></div>
-                            <div class="FieldHolder"><input type="text"></div>
+                            <div class="FieldHolder"><input type="text" name="phoneNumb"></div>
                         </div>
 
                         <div class="FormFieldHolder">
@@ -102,7 +102,8 @@
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
             <script>
                 $(function(){
-                    // All jQuery code goes here
+                    $('#alcoveLogo').css('opacity', 0.4);
+                    $('.servicesBtn').css('color', '#FFF'); $('input[name*="Numb"]').css('border','1px solid red');
                 })
             </script>
         </div>

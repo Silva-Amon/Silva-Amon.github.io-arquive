@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <style>
+            .demo {
+                border: 1px solid #eee;
+            }
+            .test{
+                border: 2px solid #eeee;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="output">Hello World!</p>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+                $(".output").addClass("demo");
+                $(".output").toggleClass("test");
+                
+            })
+        </script>
+    </body>
+    
+</html>
