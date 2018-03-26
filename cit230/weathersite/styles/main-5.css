@@ -20,7 +20,7 @@ header, main, nav{
 header a{
     border-style: none;
     text-decoration: none;
-    max-width: 580px;
+    max-width: 600px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1%;
