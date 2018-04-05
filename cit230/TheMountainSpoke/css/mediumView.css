@@ -32,6 +32,10 @@
         border-bottom: 0;
         border-left: 1px solid #3F3F3F;
     }
+    #gridContainer section a > img{
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
     #copyright{
         grid-column: 1/3;
     }
