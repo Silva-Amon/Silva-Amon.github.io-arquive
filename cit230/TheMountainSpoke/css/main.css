@@ -122,7 +122,9 @@ footer{
 #gridContainer section{
     border-bottom: 1px solid #3F3F3F;
 }
-
+#gridContainer h3{
+    font-weight: 600;
+}
 #gridContainer section p img{
     vertical-align: middle;
     margin-right:10px;
