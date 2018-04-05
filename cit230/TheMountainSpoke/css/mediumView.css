@@ -1,6 +1,12 @@
 @media only screen and (min-width: 37.5em) {    
-    #hamburg{
+    #hamburger{
         display: none;
+    }
+    header h1{
+        font-size: 3rem;
+    }
+    nav{
+        padding: 0;
     }
     nav ul{
         display: block;
@@ -24,7 +30,7 @@
     }
     #gridContainer section{
         border-bottom: 0;
-        border-left: 1px solid #9F9D9D;
+        border-left: 1px solid #3F3F3F;
     }
     #copyright{
         grid-column: 1/3;
