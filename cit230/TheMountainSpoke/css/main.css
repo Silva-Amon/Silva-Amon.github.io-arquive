@@ -14,11 +14,13 @@ header{
     line-height: 0;
     max-width:1600px;
     max-height: 419px;
+    width:100%;
     padding-top: 15%;
-    background-image: url(../img/slideImg/6.jpg);
+    background-image: url(../img/slideImg/4.jpg);
     background-attachment: fixed;
-    background-repeat: no-repeat;
     background-size: contain;
+    background-repeat: no-repeat;
+    
 }
 
 header h1{
