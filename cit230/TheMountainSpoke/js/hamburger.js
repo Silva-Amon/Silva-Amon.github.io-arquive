@@ -1,4 +1,6 @@
-function toggleNavMenu(){
-    document.getElementById("navUl").classList.toggle("hamburgerActived");
-   
-}
+$(function(){
+
+    $("#hamburger").click(function(){
+            $("#navUl").toggleClass("hamburgerActived");
+    });
+});

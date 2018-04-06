@@ -2,9 +2,6 @@
     #hamburger{
         display: none;
     }
-    header{
-
-    }
     header h1{
         font-size: 3rem;
     }
@@ -31,9 +28,12 @@
     #gridContainer h2{
         font-weight: 100;
     }
+    #gridContainer section:nth-child(2){
+        border-left: 1px solid #3F3F3F;
+    }
+    
     #gridContainer section{
         border-bottom: 0;
-        border-left: 1px solid #3F3F3F;
     }
     #gridContainer section a > img{
         margin-bottom: 10px;
@@ -41,6 +41,8 @@
         margin-left: 10px;
     }
     #copyright{
+        border-top: 1px solid #3F3F3F;
+        margin-top:25px;
         grid-column: 1/3;
     }
 }
