@@ -9,14 +9,6 @@
             
         },
         {
-            "name":"Nimbus 2000",
-            "sizes":"XS=5'-5'3'', S=5'3''-5'6'', M=5'6''-5'9'', L=5'9''-6', XL=6'-6'4''",
-            "price":1000,
-            "colors":"red, green, and black",
-            "description":"Super confort bike. If you are searching for something simple, but confortable, it is the best choice."
-            
-        },
-        {
             "name":"Black Diamond 7",
             "sizes":"XS, S, M, L, XL",
             "price":2000,
