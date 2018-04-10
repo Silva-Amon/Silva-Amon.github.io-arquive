@@ -1,7 +1,4 @@
 * { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
-body{
-
-}
 header, nav, main, footer{
     font-family: Padauk, sans-serif;
 }
@@ -10,7 +7,7 @@ header, nav, main, #gridContainer{
     margin-right: auto;
     max-width: 1600px;
 }
-header{
+body > header{
     line-height: 0;
     max-width:1600px;
     max-height: 419px;
@@ -20,7 +17,7 @@ header{
     background-repeat: no-repeat;
 }
 
-header h1{
+body > header h1{
     margin-left:10px;
     display: inline-block;
     font-family: Oswald, sans-serif;
@@ -28,12 +25,6 @@ header h1{
     vertical-align: bottom;
     color:white;
 }
-/*
-header img{
-width: 100%;
-height: 100%;
-}
-*/
 
 nav{
     background-color: #f4bf42;
@@ -56,11 +47,12 @@ nav{
     color: #FFFFFF;
 }
 .hamburgerActived{
+
     display: block;
 }
 
 nav ul{
-    
+
     display: none;
     list-style-type: none;
     margin:0;
@@ -83,7 +75,103 @@ nav li a:hover, .actualPage{
     background-color: #D93434;
     color: #FFFFFF;
 }
-#slideImg img{
+#eventGrid{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+#eventGrid h2{
+    text-align: left;
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#eventGrid form{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    width:75%;
+}
+
+#eventGrid form, textarea, select, label{
+    display: block;
+    margin-top:10px;
+    font-family: Padauk, sans-serif;
+}
+fieldset{
+    border: black 1px solid;
+    border-radius: .7em;
+}
+legend{
+    font-weight: bold;
+    margin-left: 5%;
+    padding: .5em;
+    font-size: 1.1em;
+}
+
+label{
+    margin-top:25px;
+    display: block;
+    margin: .5em;
+}
+label span{
+    display: block;
+    padding-top: .9em;
+    padding-bottom: .2em;
+}
+label .ast{
+    font-size: 1em;
+    margin: .5em;
+    display: inline;
+}
+/*--------- Form validation style ---------*/
+input:required~.ast:after{
+    content: "*";
+    color: #3F3F3F;
+} 
+input:optional~.ast:after{
+    content: "(optional)";
+    color: #3F3F3F;
+} 
+
+input:not([type="submit"]):valid:focus, textarea:valid:focus, select:valid:focus{
+    box-shadow: 0 0 10px rgba(51, 51, 255, 0.8);
+    outline:0;
+}
+input:not([type="submit"]):invalid:focus, textarea:invalid:focus, select:invalid:focus{
+    box-shadow: 0 0 10px rgba(217, 52, 52, 0.8);
+    outline:0;
+}
+/*-------End form validation Style ---------*/
+
+input{
+    width:80%;
+}
+textarea{
+    resize: vertical;
+    width: 100%;
+    height: 100px;
+}
+#eventGrid .sentButton{
+    margin-top: 30px;
+    background-color:#f4bf42;
+    border: 1px solid #3F3F3F;
+    font-size: 1.6rem;
+    display: block;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: Oswald, sans-serif;
+    padding-bottom: 5px; 
+    width:100%;
+}
+
+#eventGrid .sentButton:hover{
+    background-color: #D93434;
+    color: #FFFFFF;
+}
+
+#mainGrid img{
     width:100%;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -98,6 +186,13 @@ main h1{
     margin-left:15px;
     margin-right:15px;
 }
+main h2{
+    text-align: left;
+    width:75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Oswald, sans-serif;
+}
 main p{
     width: 75%;
     margin-left: auto;
@@ -105,6 +200,7 @@ main p{
     font-size: 1.2rem;
     margin-bottom: 40px;
     padding-bottom: 15px;
+    text-align: justify;
     border-bottom: 1px solid gray;
 
 }
@@ -149,4 +245,9 @@ a{
 }
 a:hover{
     color:#050505;
+}
+.backMenu{
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: 2rem;
 }

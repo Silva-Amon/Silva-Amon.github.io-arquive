@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <title>The Mountain Spoke</title>
+        <meta charset="utf-8">
+        <meta name="description" content="The Mountain Spoke is specialized in bike and part sale, repair, tour, and much more."> 
+        <meta name="author" content="Amon Silva">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="bike,sale,service,shop,store,bozeman,montana">
+
+        <!-- External resources -->
+
+        <!-- Getting google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Padauk" rel="stylesheet">
+
+        <!-- normalize -->
+        <link href="css/normalize.css" rel="stylesheet">
+
+        <!-- Page Style -->
+
+        <!--Main View-->
+        <link href="css/main.css" rel="stylesheet">
+
+        <!--Medium View-->
+        <link href="css/mediumView.css" rel="stylesheet">
+
+        <!--Large View-->
+        <link href="css/largeView.css" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><h1>The Mountain Spoke</h1></a>
+        </header>
+
+        <nav>
+            <button id="hamburger">&#9776;</button>
+            <ul id="navUl">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="eventGrid">
+                <section>
+                    <h1>Cycle the Continental Divide</h1>
+                    <p>Cycle the Continental Divide is a annual event of bike.</p>
+                    <h2>Date and hour</h2>
+                    <p>July 7th, 7 A.M.
+                    </p>
+                    <h2>Route</h2>
+                    <p>We began our race from our store, 1000 Street Name Bozeman, MT 59715, and finish it at Jungle Tour, 100 Mayfield Road Bozeman, MT 59715, USA.</p>
+                    <h2>Cost</h2>
+                    <p>$25.00</p>
+                    <h2>Bike skill level</h2>
+                    <p>beginer-advanced</p>
+                </section>
+                <section>
+                    <h1>Make your registration</h1>
+                    <form target="_blank" action="registrationSend.html" method="get">
+                        <fieldset>
+                            <legend>Personal Information</legend>
+
+                            <label><span>Full name</span> <input type="text" name="fullName" pattern="[a-zA-Z ]{5,}" required><span class="ast"></span></label>
+
+                            <label><span>Email</span> <input type="email" name="email" placeholder="someone@something.com"><span class="ast"></span></label>
+
+                            <label><span>Phone Number</span> <input type="tel" placeholder="(541) 754-3010" name="phone" required><span class="ast"></span></label>
+
+                            <label><span>Birthday</span> <input type="date" name="date" required><span class="ast"></span></label>
+
+                            <label><span>Home State</span> <input type="text" list="homeState" name="homeState">
+                                <datalist id="homeState">
+                                    <option value="Alabama"></option>
+                                    <option value="Alaska"></option>
+                                    <option value="Arizona"></option>
+                                    <option value="Arkansas"></option>
+                                    <option value="California"></option>
+                                    <option value="Colorado"></option>
+                                    <option value="Connecticut"></option>
+                                    <option value="Delaware"></option>
+                                    <option value="District of Columbia"></option>
+                                    <option value="Florida"></option>
+                                    <option value="Georgia"></option>
+                                    <option value="Hawaii"></option>
+                                    <option value="Idaho"></option>
+                                    <option value="Illinois"></option>
+                                    <option value="Indiana"></option>
+                                    <option value="Iowa"></option>
+                                    <option value="Kansas"></option>
+                                    <option value="Kentucky"></option>
+                                    <option value="Louisiana"></option>
+                                    <option value="Maine"></option>
+                                    <option value="Maryland"></option>
+                                    <option value="Massachusetts"></option>
+                                    <option value="Michigan"></option>
+                                    <option value="Minnesota"></option>
+                                    <option value="Mississippi"></option>
+                                    <option value="Missouri"></option>
+                                    <option value="Montana"></option>
+                                    <option value="Nebraska"></option>
+                                    <option value="Nevada"></option>
+                                    <option value="New Hampshire"></option>
+                                    <option value="New Jersey"></option>
+                                    <option value="New Mexico"></option>
+                                    <option value="New York"></option>
+                                    <option value="North Carolina"></option>
+                                    <option value="North Dakota"></option>
+                                    <option value="Ohio"></option>
+                                    <option value="Oklahoma"></option>
+                                    <option value="Oregon"></option>
+                                    <option value="Pennsylvania"></option>
+                                    <option value="Rhode Island"></option>
+                                    <option value="South Carolina"></option>
+                                    <option value="South Dakota"></option>
+                                    <option value="Tennessee"></option>
+                                    <option value="Texas"></option>
+                                    <option value="Utah"></option>
+                                    <option value="Vermont"></option>
+                                    <option value="Virginia"></option>
+                                    <option value="Washington"></option>
+                                    <option value="West Virginia"></option>
+                                    <option value="Wisconsin"></option>
+                                    <option value="Wyoming"></option>
+                                </datalist>
+                                <span class="ast"></span>
+                            </label>
+                            <label><span>Special accomodations/comments</span><textarea name="addtionalInfor"></textarea><span class="ast"></span></label>
+                            <input type="submit" value="Confirm registration" class="sentButton">
+                        </fieldset>
+                    </form></section>
+            </div>
+        </main>
+
+        <footer>
+            <div id="gridContainer">
+                <section>
+                    <h3>Social Media</h3>
+                    <a href="#"><img class="socialMedia" src="img/socialMedia/facebook.svg"></a>
+                    <a href="#"><img class="socialMedia" src="img/socialMedia/instagram.svg"></a>
+                    <a href="#"><img class="socialMedia" src="img/socialMedia/twitter.svg"></a>
+                    <a href="#"><img class="socialMedia" src="img/socialMedia/pinterest.svg"></a>
+                </section>
+                <section>
+                    <h3>Store Information</h3>
+                    <p><img class="socialMedia" src="img/socialMedia/whatsapp.svg">222-222-222-222</p>
+                    <p>1000 Street Name Bozeman, MT 59715, USA</p>
+                </section>
+                <section id="copyright">
+                    <p>&copy; Amon Teotonio Bernardo da Silva • <a href="http:\\www.byui.edu">Brigham Young University Idaho</a> • <a href="#">Site navigation Video</a> • <span>2018</span></p>
+                </section>
+            </div>
+        </footer>
+        <script src="js/hamburger.js"></script>
+        <script src="js/activeLink.js"></script>
+    </body>
+</html>
