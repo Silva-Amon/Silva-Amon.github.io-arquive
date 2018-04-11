@@ -11,6 +11,8 @@ if (pageHREF !== ""){
         menu[i].className="";
         if (currentURL===pageHREF){
             menu[i].className="actualPage";
+        } else if (pageHREF == ""){
+            menu[0].className="actualPage";
         }
     }
 }

@@ -295,6 +295,7 @@ main a{
 #serviceGrid{
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
 }
 table{
     margin-top: 5%;
@@ -312,7 +313,7 @@ table caption{
     font-size: 1.8rem;
     font-weight: 900;
     color: #D93434;
-    background-color: #fadd9a;
+    background-color: #f4bf42;
 }
 table thead{
     background-color: 9F9D9D;
@@ -325,5 +326,5 @@ table tbody tr:nth-child(odd){
 }
 table tfoot{
     font-weight: 900;
-    background-color:#fadd9a;
+    background-color:#f4bf42;
 }
