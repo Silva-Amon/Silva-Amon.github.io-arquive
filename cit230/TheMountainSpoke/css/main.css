@@ -293,12 +293,12 @@ main a{
 }
 /*-------------- TABLE STYLE ------------------*/
 #serviceGrid{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
+    margin-left:15px;
+    margin-right:15px;
+    padding:15px;
+    overflow-x: auto;
 }
 table{
-    overflow-x: scroll;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
