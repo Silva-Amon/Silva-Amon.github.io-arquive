@@ -2,7 +2,16 @@
     #mainGrid{
         display: block;
     }
-    main p, #eventGrid h2, #eventGrid form, main h2{
+    #saleGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+    #saleGrid img{
+        margin-bottom: 0;
+    }
+    #saleGrid img:hover{
+        box-shadow: 8px 8px 8px #9F9D9D;
+    }
+    main p, #eventFlex h2, #eventFlex form, main h2{
         width: 60%;
     }
     .socialMedia{

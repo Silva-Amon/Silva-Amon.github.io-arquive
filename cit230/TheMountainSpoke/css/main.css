@@ -25,7 +25,7 @@ body > header h1{
     font-size: 2rem;
     vertical-align: bottom;
     color:white;
-    
+
 }
 
 nav{
@@ -77,27 +77,29 @@ nav li a:hover, .actualPage{
     background-color: #D93434;
     color: #FFFFFF;
 }
-#eventGrid{
+#eventFlex{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
     width:100%;
     margin-left:auto;
     margin-right:auto;
 
 }
-#eventGrid h2{
+#eventFlex h2{
     text-align: left;
     width:75%;
     margin-left:auto;
     margin-right:auto;
 }
-#eventGrid form{
+#eventFlex form{
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2rem;
     width:75%;
 }
 
-#eventGrid form, textarea, select, label{
-    display: block;
+#eventFlex form, textarea, select, label{
     margin-top:10px;
     font-family: Padauk, sans-serif;
 }
@@ -155,7 +157,7 @@ textarea{
     width: 100%;
     height: 100px;
 }
-#eventGrid .sentButton{
+#eventFlex .sentButton{
     margin-top: 30px;
     background-color:#f4bf42;
     border: 1px solid #3F3F3F;
@@ -168,14 +170,36 @@ textarea{
     width:100%;
 }
 
-#eventGrid .sentButton:hover{
+#eventFlex .sentButton:hover{
     background-color: #D93434;
     color: #FFFFFF;
+}
+#saleGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap:25px;
+    margin-top:3%;
+    margin-left:10px;
+    margin-right:10px;
+    
+}
+#saleGrid p{
+    margin-top: 5%;
+    margin-bottom: 5px;
+}
+#saleGrid img{
+    
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 50px 25% ;
+    margin-bottom: 5%;
 }
 
 #mainGrid img{
     width:100%;
-    margin-top: 5px;
     margin-bottom: 10px;
 }
 main {
