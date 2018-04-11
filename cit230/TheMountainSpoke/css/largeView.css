@@ -20,4 +20,29 @@
     body > header h1{
         font-size: 4rem;
     }
+    /*-------------- TABLE STYLE ------------------*/
+    table{
+        font-size:2rem;
+    }
+    table caption{
+        font-size: 2.5rem;
+    }
+    /*-------------- END TABLE STYLE ------------------*/
+
+    #contactGrid{
+        grid-template-columns: 1fr 1px 1fr;
+        grid-gap: 15px;
+    }
+    #div{
+        align-self: center;
+        background-color: black;
+        height: 600px;
+        border-radius: 100% 100%;
+    }
+    #googleMap{
+        align-self: center;
+        width:97.5%;
+        margin-right: 15px;
+        height:550px;
+    }
 }

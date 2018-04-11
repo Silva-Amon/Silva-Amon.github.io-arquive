@@ -1,6 +1,6 @@
 $(function(){
     //conection with JSON
-    $.getJSON("js/saleJSON.json", function(prodJSON){
+    $.getJSON("data/saleJSON.json", function(prodJSON){
         
         //getting items of products
         var imgAdd = "img/socialMedia/whatsapp.svg";

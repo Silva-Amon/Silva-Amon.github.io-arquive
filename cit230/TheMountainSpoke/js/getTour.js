@@ -1,7 +1,7 @@
 var header = document.querySelector('#mainGrid section header');
 var section = document.querySelector('#mainGrid section section');
 
-var requestURL = 'js/tour.json';
+var requestURL = 'data/tour.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
