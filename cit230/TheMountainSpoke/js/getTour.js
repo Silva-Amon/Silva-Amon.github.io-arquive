@@ -37,17 +37,17 @@ function populateHeader(jsonObj) {
         paraLength = document.createElement('p');
         paraLength.textContent  = tour[i]['length'] + " miles";
         //skill
-        skillH2.textContent = "Skills";
+        skillH2.textContent = "Skills Level";
         paraSkill = document.createElement('p');
-        paraSkill.textContent  = "Bike level skill: " + tour[i]['skill'];
+        paraSkill.textContent  = tour[i]['skill'];
         //cost
         costH2.textContent = "Cost";
         paraCost = document.createElement('p');
-        paraCost.textContent  = "Cost: $" + tour[i]['cost'];
+        paraCost.textContent  = "$" + tour[i]['cost'];
         //location
         locationH2.textContent = "Location";
         paraLocation = document.createElement('p');
-        paraLocation.textContent  = "Location: " + tour[i]['location'];
+        paraLocation.textContent  = tour[i]['location'];
         //description
         paraDescription = document.createElement('p');
         paraDescription.textContent  = tour[i]['description'];
