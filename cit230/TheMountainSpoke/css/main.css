@@ -213,6 +213,8 @@ textarea{
     margin-right: auto;
     width:97.5%;
     height:450px;
+    border: 1px dashed black;
+    border-radius: 15px 15px;
 }
 main {
     background-color: #FFFFFF;
