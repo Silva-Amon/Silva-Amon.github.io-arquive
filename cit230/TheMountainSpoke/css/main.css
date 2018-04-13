@@ -328,3 +328,9 @@ table tfoot{
     font-weight: 900;
     background-color:#f4bf42;
 }
+
+/*---------------SLIDE-------------------*/
+
+#slide img{
+    display: none;
+}
