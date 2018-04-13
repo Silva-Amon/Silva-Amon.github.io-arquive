@@ -333,6 +333,10 @@ table tfoot{
 
 /*---------------SLIDE-------------------*/
 
+#slide{
+    margin-left: auto;
+    margin-right: auto;
+}
 #slide img{
     display: none;
 }
