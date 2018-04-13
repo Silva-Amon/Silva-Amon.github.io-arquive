@@ -37,7 +37,7 @@ function populateHeader(jsonObj) {
         paraLength = document.createElement('p');
         paraLength.textContent  = tour[i]['length'] + " miles";
         //skill
-        skillH2.textContent = "Skills Level";
+        skillH2.textContent = "Skill Level";
         paraSkill = document.createElement('p');
         paraSkill.textContent  = tour[i]['skill'];
         //cost
