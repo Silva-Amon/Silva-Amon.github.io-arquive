@@ -1,0 +1,71 @@
+header{
+    background-image: url("../img/background1-1.jpeg");
+    padding-top: 400px;
+    background-position:top; 
+    background-color: darksalmon;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:25px;
+    margin-bottom: 25px;
+}
+#progressDiv{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom:25px;
+
+}
+.progress{
+    
+    text-align: center;
+    vertical-align: middle;
+}
+
+#total{
+    margin-top: 10px
+}
+.list-background span{
+    color: dimgray;
+}
+.list-background span:hover{
+    color:black;
+    font-weight: 700;
+    transition: 0.1s;
+}
+
+.list-group-item.active2{
+    background-color: indianred;
+    border-color: brown;
+    border-width: 1px;
+    color: white;
+    font-weight: 700;
+}
+main button{
+    width: 100%; 
+    background-color: indianred; 
+    color: white; 
+    border: none; 
+    height: 50px;
+    margin-top: 10px; 
+    font-weight: 700; 
+    font-size: 1.5rem;
+}
+main button:hover{
+    transition: 0.4s;
+    background-color: brown; 
+}
+.footBackGround{
+    background-color: #f5c6cb;
+}
+.copyright{
+    background-color: indianred;
+    color: white;
+    font-weight: 
+}

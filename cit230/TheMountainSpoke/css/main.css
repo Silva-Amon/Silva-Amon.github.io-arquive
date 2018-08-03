@@ -277,6 +277,9 @@ footer{
     width: 45px;
     background-color:#f4bf42;
 }
+.socialMedia path{
+    fill:#D93434;
+}
 
 a{
     font-size: 1rem;
