@@ -8,18 +8,18 @@ header{
     background-attachment: fixed;
 }
 main{
-    width: 75%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-top:25px;
     margin-bottom: 25px;
 }
 #progressDiv{
-    width: 75%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
-    margin-bottom:25px;
+    margin-top: 35px;
+    margin-bottom:35px;
 
 }
 .progress{
@@ -53,13 +53,34 @@ main button{
     color: white; 
     border: none; 
     height: 50px;
-    margin-top: 10px; 
+    margin-top: 15px; 
     font-weight: 700; 
     font-size: 1.5rem;
 }
 main button:hover{
     transition: 0.4s;
     background-color: brown; 
+}
+.inf{
+    display:none;
+    border: 1px solid indianred;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+.inf:hover{
+    box-shadow: 1px 1px 10px indianred;
+    transition: 0.3s
+}
+input, textarea{
+    display: block;
+    width: 100%;
+}
+textarea{
+    height: 120px;
+}
+label{
+    margin-top: 10px;
 }
 .footBackGround{
     background-color: #f5c6cb;
