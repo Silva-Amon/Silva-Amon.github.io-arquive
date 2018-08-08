@@ -109,14 +109,21 @@ label{
 }
 .LargeImg:hover{
     cursor: pointer;
+    border-style: solid;
+    border-color: indianred;
+    transition: 0.3s
 }
 
 .thumbernail{
     transition: 0.5s;
     margin: 5px;
-    max-width: 250px;
+    width: 30%;
+    border-style: dashed;
+    border-color: indianred;
+    border-radius: 15px;
 }
 .thumbernail:hover{
     cursor: pointer;
+    width: 33%;
 }
 /*End Fotos Page*/
