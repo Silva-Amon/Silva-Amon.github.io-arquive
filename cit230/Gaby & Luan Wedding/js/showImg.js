@@ -15,7 +15,7 @@ $(function(){
                 {
                     $('html, body').stop().animate({
                         scrollTop: $img.offset().top
-                    }, 1000);
+                    }, 600);
                 }, 300);
         }
 
