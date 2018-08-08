@@ -127,3 +127,10 @@ label{
     width: 33%;
 }
 /*End Fotos Page*/
+/*Local Page*/
+#local iframe{
+    border: 2px dashed indianred;
+    width: 100%;
+    height: 550px;
+}
+/*End Local Page*/
