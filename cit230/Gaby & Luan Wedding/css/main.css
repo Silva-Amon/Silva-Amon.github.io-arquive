@@ -8,14 +8,14 @@ header{
     background-attachment: fixed;
 }
 main{
-    width: 65%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     margin-top:25px;
     margin-bottom: 25px;
 }
 #progressDiv{
-    width: 70%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
@@ -100,6 +100,9 @@ label{
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid indianred;
+    border-radius: 10px;
+    padding: 5px 0px;
 }
 
 .LargeImg{
@@ -117,20 +120,22 @@ label{
 .thumbernail{
     transition: 0.5s;
     margin: 5px;
-    width: 30%;
+    width: 220px;
     border-style: dashed;
     border-color: indianred;
     border-radius: 15px;
 }
 .thumbernail:hover{
     cursor: pointer;
-    width: 33%;
+    width: 250px;
 }
 /*End Fotos Page*/
+
 /*Local Page*/
 #local iframe{
     border: 2px dashed indianred;
     width: 100%;
-    height: 550px;
+    height: 350px;
+    margin-top: 15px;
 }
 /*End Local Page*/
