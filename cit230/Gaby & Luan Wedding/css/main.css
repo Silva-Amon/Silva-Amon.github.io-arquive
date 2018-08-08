@@ -23,7 +23,7 @@ main{
 
 }
 .progress{
-    
+
     text-align: center;
     vertical-align: middle;
 }
@@ -90,3 +90,33 @@ label{
     color: white;
     font-weight: 
 }
+
+/*Fotos Page*/
+
+#fotos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LargeImg{
+    width: 100%;
+    transition: 0.5s;
+
+}
+.LargeImg:hover{
+    cursor: pointer;
+}
+
+.thumbernail{
+    transition: 0.5s;
+    margin: 5px;
+    max-width: 250px;
+}
+.thumbernail:hover{
+    cursor: pointer;
+}
+/*End Fotos Page*/
