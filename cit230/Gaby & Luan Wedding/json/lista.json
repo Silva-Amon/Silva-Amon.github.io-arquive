@@ -1,0 +1,21 @@
+{
+    "lista":
+    [
+        {
+            "Produto": "Panela",
+            "Preco": 50.50
+        }, 
+        {
+            "Produto": "Geladeira",
+            "Preco": 500.00
+        }, 
+        {
+            "Produto": "Maquina de Lavar",
+            "Preco": 350.00
+        }, 
+        {
+            "Produto": "Fogão",
+            "Preco": 150.00
+        }
+    ]
+}
