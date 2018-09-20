@@ -31,10 +31,10 @@ main{
 #total{
     margin-top: 10px
 }
-.list-background span{
+.list-background > span{
     color: dimgray;
 }
-.list-background span:hover{
+.list-background > span:hover{
     color:black;
     font-weight: 700;
     transition: 0.1s;
@@ -49,6 +49,7 @@ main{
     font-weight: 700;
     cursor: pointer;
 }
+
 main button{
     width: 100%; 
     background-color: indianred; 
