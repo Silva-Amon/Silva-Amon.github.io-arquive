@@ -25,9 +25,10 @@ request.send();
 request.onload = function() {
     var lista = request.response;
     populateList(lista);
+    getPrice();
 }
 
-request.onloadend = function(){
+function getPrice(){
     var total = 0
     $("#marryList").append("<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>");
     $(function(){
