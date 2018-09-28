@@ -1,0 +1,117 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.square{
+
+    margin: 35px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    line-height: 250px;
+    background-color: bisque;
+}
+
+#s1{
+    animation-name: square1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes square1{
+    from{
+        transform:translateX(-50px);
+        background-color: azure;
+    }
+    to{
+        transform:translateX(50px);
+        background-color: red;
+    }
+}
+
+#s2{
+    animation-name: square2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: -1s;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+}
+@keyframes square2{
+    0%{
+        transform:translateX(-50px);
+        background-color: azure;
+    }
+    100%{
+        transform:translateX(50px);
+        background-color: red;
+    }
+}
+#s3{
+    animation: square3 5s linear 0s infinite backwards; 
+}
+@keyframes square3{
+    0%{
+        transform:translateX(-50px);
+        background-color: azure;
+    }
+    25%{
+        transform:translateY(-50px);
+        background-color: bisque;
+    }
+    50%{
+        transform:translateY(0px);
+        background-color: greenyellow;
+    }
+    75%{
+        transform:translateY(50px);
+        background-color: brown;
+    }
+    100%{
+        transform:translateX(50px);
+        background-color: red;
+    }
+}
+#s4{
+    animation: square4 5s ease-in-out 0s 3 alternate; 
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+@keyframes square4{
+    0%{
+        transform:translateX(-50px);
+        background-color: azure;
+    }
+    25%{
+        transform:translateY(-50px);
+        background-color: bisque;
+    }
+    50%{
+        transform:translateY(0px);
+        background-color: greenyellow;
+    }
+    75%{
+        transform:translateY(50px);
+        background-color: brown;
+    }
+    100%{
+        transform:translateX(50px);
+        background-color: red;
+    }
+}
+
+/*Aren't working, I don't know why*/
+#s12{
+    animation-name: square1, square2;
+    animation-duration: 3s, 2s;
+    animation-timing-function: ease, ease-in;
+    animation-delay: 0.5s, -1s;
+    animation-iteration-count: 1, 2;
+    animation-direction: normal;
+}

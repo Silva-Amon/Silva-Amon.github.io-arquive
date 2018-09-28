@@ -1,0 +1,116 @@
+#box1{
+    background-color:antiquewhite;
+    width:200px;
+    transition: background-color 3s;
+    margin-bottom: 10px;
+}
+
+#box1:hover{
+    background-color:green;
+}
+
+#box2{
+    background-color:aquamarine;
+    width:200px;
+    transition: background-color 3s;
+    margin-bottom: 10px;
+}
+
+#box2:active{
+    background-color:red;
+}
+
+input[type=text]{
+    width:150px;
+    outline:none;
+    border: 5px solid black;
+    transition: width 2s, background-color 0.5s, border 2s;
+    margin-bottom: 10px;
+
+}
+
+input[type=text]:focus{
+    width:350px;
+    background-color: coral;
+    border: 0.5px solid gray;
+}
+
+#box3{
+    background-color: bisque;
+    width: 200px;
+    transition: width 1s ease;
+    margin-bottom: 10px;
+}
+#box3:hover{
+    width: 300px;
+}
+#box4{
+    background-color: burlywood;
+    width: 200px;
+    transition: width 1s linear;
+    margin-bottom: 10px;
+}
+#box4:hover{
+    width: 300px;
+}
+
+#box5{
+    background-color: cadetblue;
+    width: 200px;
+    transition: width 1s ease-in;
+    margin-bottom: 10px;
+}
+#box5:hover{
+    width: 300px;
+}
+#box6{
+    background-color: chartreuse;
+    width: 200px;
+    transition: width 1s ease-out;
+    margin-bottom: 10px;
+}
+#box6:hover{
+    width: 300px;
+}
+
+#box7{
+    background-color: chocolate;
+    width: 200px;
+    transition: width 1s ease-in-out;
+    margin-bottom: 10px;
+}
+#box7:hover{
+    width: 300px;
+}
+#box8{
+    background-color: coral;
+    width: 200px;
+    transition: transform 1s cubic-bezier(.24,1.03,.94,.45);
+    margin-bottom: 10px;
+}
+#box8:hover{
+    transform:translate(25px, 100px);    
+}
+
+#box9{
+    background-color: coral;
+    width: 200px;
+    transition: transform 1s cubic-bezier(.24,1.03,.94,.45) 1s;
+    margin-bottom: 10px;
+}
+#box9:hover{
+    transform:translate(25px, 100px);    
+}
+#box10{
+    background-color: coral;
+    width: 200px;
+    transition-property: transform;
+    transition-duration:  1s;
+    transition-timing-function: cubic-bezier(.24,1.03,.94,.45);
+    transition-delay:  1s;
+    margin-bottom: 10px;
+}
+#box10:hover{
+    transform:translate(25px, 100px);    
+}
+
