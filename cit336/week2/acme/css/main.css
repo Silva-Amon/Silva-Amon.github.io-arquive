@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('../images/site/background.jpg');
+}
+
+header, main, nav, footer{
+    margin: 0 15px 0 15px;
+}
+header, main, main ul, footer{
+    padding: 10px;
+}
+    
+/*BEGIN HEADER*/
+header,nav, main, footer{
+    font-family: 'acme', sans-serif;
+    background-color: #FFFFFF;
+}
+header{
+    margin: 0 15px 0 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    margin-right: 25px;
+    width: 200px;
+    height: 75px;
+}
+#accountFolder{
+    width: 1.4em;
+    margin-right: 5px;
+}
+header a{
+    text-decoration: none;
+    font-size:1.4em;
+    color: #000000;
+}
+header a:hover {
+    text-decoration: none;
+    font-size:1.4em;
+    color: #808080;
+}
+/*END HEADER*/
+
+/*BEGIN NAV*/
+nav{
+    margin: 0 15px 0 15px;
+    font-size: 1.4em;
+    background-color: #de2226;
+    border-top: 5px solid #de2226;
+    border-left: 5px solid #de2226;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px;
+}
+nav ul li a.active{
+    color: #de2226;
+    background-color: #ffffff;
+}
+nav ul li a:hover{
+    color: #000000;
+}
+nav ul li a:active{
+    background-color: #808080;
+}
+/*END NAV*/
+
+/*BEGIN MAIN*/
+main{
+    margin: 0 15px 0 15px;
+    padding: 10px;
+}
+#mainHome #rocket{
+    background-image: url('../images/site/rocketfeature.jpg');
+    background-size: cover;
+}
+#mainHome section div{
+    margin-left: auto;
+    padding: 10px;
+    padding-bottom: 100px;
+    width: 270px;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #990033;
+}
+
+#mainHome > section img{
+    width: 100%;
+
+}
+#commentList{
+    margin-top: 15px;
+}
+#commentList ul{
+    padding: 15px;
+    margin: 0 15px 0 15px;
+    line-height: 25px;
+}
+
+
+#recipes{
+    display: grid;
+    max-width: 350px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+
+}
+#recipes figure a{
+    padding-top: 10px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: block;
+    text-align: center;
+    color: #0000ee;
+}
+
+#recipes figure{
+    margin-top: 5px;
+    background-color: lightgray;
+}
+
+#recipes figure img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+}
+/*END MAIN*/
+
+/*BEGIN FOOTER*/
+footer{
+    border-top: 5px solid black;
+    margin-bottom: 25px;
+}
+footer p{
+    text-align: center;
+    margin: 5px;
+    padding: 0;
+}
+/*END FOOTER*/

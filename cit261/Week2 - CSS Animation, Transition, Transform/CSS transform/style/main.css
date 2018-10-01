@@ -21,6 +21,14 @@
     margin: 1.5em auto;
     transform-style: preserve-3d; /*let the transformed child elements perserve the 3D transformations*/
     transform: rotateX(-42deg) rotateY(32deg); /*rotate(-40deg, 32deg) */
+    transition: transform 2s;
+}
+.cube{
+    transition: transform 2s;
+}
+
+.cube:hover{
+    transform: rotateX(-84deg) rotateY(0deg);
 }
 
 .side {
@@ -32,7 +40,7 @@
     color: white;
     text-align: center;
     line-height: 2em;
-    
+
 }
 
 .front{
