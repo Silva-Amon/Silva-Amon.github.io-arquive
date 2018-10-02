@@ -47,7 +47,9 @@ input[type=text]:focus{
 #box4{
     background-color: burlywood;
     width: 200px;
-    transition: width 1s linear;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
     margin-bottom: 10px;
 }
 #box4:hover{

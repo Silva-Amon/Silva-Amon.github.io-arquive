@@ -21,11 +21,11 @@
     animation-duration: 3s;
     animation-timing-function: ease;
     animation-delay: 0.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 2;
     animation-direction: alternate;
 }
 @keyframes square1{
-    from{
+   from{
         transform:translateX(-50px);
         background-color: azure;
     }
