@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>for</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Click over the texts below:</h1>
+        <h4 onclick="hello10()">10 times Hello</h4>
+        <p id="hello"></p>
+
+        <h4 onclick="hello5()">5 times Hello</h4>
+        <p id="hello2"></p>
+
+        <h4 onclick="hello4()">4 times Hello</h4>
+        <p id="hello3"></p>
+        <script>
+            function hello10(){
+                var hello = 'hello ';
+                for (var i = 0; i < 10; i++){
+                    document.getElementById('hello').textContent += hello;
+                }
+            }
+
+            function hello5(){
+                var hello = 'hello ';
+                for (var i = 0; i < 10; i+=2){
+                    document.getElementById('hello2').textContent += hello;
+                }
+            }
+
+            function hello4(){
+                var hello = 'hello ';
+                for (var i = 2; i < 10; i+=2){
+                    document.getElementById('hello3').textContent += hello;
+                }
+            }
+        </script>
+    </body>
+</html>

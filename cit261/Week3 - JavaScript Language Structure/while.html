@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>while</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Click over the texts below:</h1>
+        <h4 onclick="hello10()">10 times Hello</h4>
+        <p id="hello"></p>
+
+        <h4 onclick="hello5()">5 times Hello</h4>
+        <p id="hello2"></p>
+
+        <h4 onclick="hello4()">4 times Hello</h4>
+        <p id="hello3"></p>
+        <script>
+            function hello10(){
+                var hello = 'hello ';
+                var i = 0;
+                while (i < 10){
+                    document.getElementById('hello').textContent += hello;
+                    i++
+                } 
+            }
+
+            function hello5(){
+                var hello = 'hello ';
+                var i = 1;
+                while (i < 10) {
+                    document.getElementById('hello2').textContent += hello;
+                    i+=2;
+                } 
+            }
+
+            function hello4(){
+                var hello = 'hello ';
+                var i = 2;
+                while (i < 10){
+                    document.getElementById('hello3').textContent += hello;
+                    i+=2;
+                } 
+            }
+        </script>
+    </body>
+</html>

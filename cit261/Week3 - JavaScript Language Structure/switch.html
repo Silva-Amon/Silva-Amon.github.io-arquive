@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>ifConditions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Mary sharing apples</h1>
+        <label for='apples'>How much apples she have?</label><br>
+        <input type='number' id='apples'><br><br>
+        <label for="friends">How much friends she have?</label><br>
+        <input type='number' id='friends'><br><br>
+        <button onclick='result()'>What Mary did with the apples?</button><br><br>
+        <p id='result'></p>
+        <script>
+            function result(){
+                var apples = document.getElementById('apples').value;
+                var friends = document.getElementById('friends').value;
+                swtich (apples){
+                    case <= 0: 
+                        document.getElementById('result').innerHTML = 'Mary ate nothing, only the air.';
+                        break;
+                    case <= 2:
+                        document.getElementById('result').innerHTML = 'Mary ate alone the apples.';
+                        break;
+                    case > 2 && friends >= 1:
+                        document.getElementById('result').innerHTML = 'Marry ate 2 apples and divided ' + ((apples-2) / friends).toFixed(2) + " from his apples with his " + friends + " friends.";
+                        break;
+                    default:
+                        document.getElementById('result').innerHTML = 'Mary ate the ' + apples + ', alone and became fat.';
+                }
+            }
+        </script>
+    </body>
+</html>

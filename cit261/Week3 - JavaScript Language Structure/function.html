@@ -1,0 +1,124 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>Functions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Click in the texts below:</h1>
+        <h2>Function without parameters: </h2>
+        <span id="text" contenteditable="true" style="font-family: cursive;">(Type here to add your text)</span>
+        <p onclick="clickMe()" style="font-size:18px; display: inline; margin-left: 15px; text-decoration: underline; color: darkslategray; cursor: pointer">Click me to print</p>
+        <p id="textResult">Result: </p>
+
+        <hr style="border-style: dashed">
+
+        <h2>Function with parameters</h2>
+        <h3>Your result more 4 times:</h3>
+        <span id="result4Times"></span>
+
+        <hr style="border-style: dashed">
+
+        <h2>Function Expression</h2>
+        <p>*This function must be place first in order to be called.</p>
+        <h3>Your result 3 times:</h3>
+        <span id="result3Times"></span>
+
+        <hr style="border-style: dashed">
+
+        <h2>Recursive Function Calling</h2>
+        <h3>Your result 2 times:</h3>
+        <span id="result2Times"></span>
+
+        <hr style="border-style: dashed">
+
+        <h2>Multiple Functions calling and Function nested</h2>
+        <p style="font-size:18px; display: inline;">Your first name is </p>
+        <span id="firstName" contenteditable="true" style="font-family: cursive;">(Type here to add your first name)</span>
+        <br>
+        <p style="font-size:18px; display: inline; ">Your last name is </p>
+        <span id="lastName" contenteditable="true" style="font-family: cursive;">(Type here to add your first name)</span>
+        <br>
+        <p onclick="clickMe2()" style="font-size:18px; display: inline; text-decoration: underline; color: darkslategray; cursor: pointer">Click me to print</p>
+        <br>
+        <span id="joinName"></span>
+        
+        <hr style="border-style: dashed">
+
+        <h2>Rest Parameter in Functions</h2>
+        <p 
+           onclick="clickMe3('-Hi,','<br>how are you?', '<br> -I\'m fine, and you?', '<br> -I\'m fine too. =D')" 
+           style="font-size:18px; display: inline; text-decoration: underline; color: darkslategray; cursor: pointer"
+           >Click me to see</p>
+        <h3>Result:</h3>
+        <span id="RestParResult"></span>
+        
+        <script>
+            function clickMe(){
+                var text = document.getElementById('text').textContent;
+                document.getElementById('textResult').innerHTML = 'Result: ' + text;
+
+                //result 4 times function
+                document.getElementById('result4Times').innerHTML += result4times(text);
+
+                //result 3 times function
+                //declared before its call and ends with ; after the {}.
+                var result3Times = function(text){return text+'<br>'+text+'<br>'+text+'<br>'}; 
+
+                document.getElementById('result3Times').innerHTML = result3Times(text);
+
+                //result 2 times function
+                document.getElementById('result2Times').innerHTML = result2Times(2, text);
+            }
+
+            function result4times(text){
+                var newText = '';
+                for (var i=0; i <= 4; i++){
+                    newText += text + "<br>";
+                }
+                return newText + "-<br>";
+            }
+            
+            //result 2 times
+            function result2Times(num, text){
+                if (num >= 1){
+                    num -= 1;
+                    return result2Times(num, text) + text + '<br>';
+                }else{
+                    return 'Result:<br><br>';
+                }                
+            }
+            
+            //Multiple calling and neasted functions.
+            function clickMe2(){
+                var firstName = document.getElementById('firstName').textContent;
+                var lastName = document.getElementById('lastName').textContent;
+                var nameJoined = functionName(firstName, lastName);
+
+                document.getElementById('joinName').innerHTML = (nameJoined);
+            }
+            function functionName(firstNameOut, lastNameOut){
+
+                function firstName(firstNameInt){ 
+
+                    return firstNameInt + " - it's my name too! =D <br>";
+                }
+
+                function lastName(lastNameInt){
+                    return lastNameInt + " - Really!? Maybe we're brothers! =)";
+                }
+
+                return firstName(firstNameOut) + lastName(lastNameOut);
+            }
+            
+            //Rest parameter function
+            
+            function clickMe3(text1, text2, ...manyMoreTexts){
+                document.getElementById('RestParResult').innerHTML = text1 + text2 + manyMoreTexts;
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>

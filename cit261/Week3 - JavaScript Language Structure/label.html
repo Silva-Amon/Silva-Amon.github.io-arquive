@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>Label</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Click over the texts below:</h1>
+        <h4 onclick="hello10()">10 times Hello</h4>
+        <p id="hello"></p>
+
+        <h4 onclick="hello5()">5 times Hello</h4>
+        <p id="hello2"></p>
+
+        <h4 onclick="hello4()">4 times Hello</h4>
+        <p id="hello3"></p>
+        <script>
+            function hello10(){
+                var hello = 'hello ';
+                var i = 0;
+                var j = 0;
+                hello10:
+                while (i < 12){
+                    document.getElementById('hello').textContent += hello;
+                    i++
+                    while (j < 10){
+                        if (i < 10){
+                            document.getElementById('hello').textContent += i + ", ";  
+                            continue hello10;
+                        } 
+                        else{
+                            document.getElementById('hello').textContent += i + ".";  
+                            break hello10;
+                        }
+                    }
+                } 
+            }
+
+            function hello5(){
+                var hello = 'hello ';
+                var i = 0;
+                var j = 0;
+                hello5:
+                while (i < 12){
+                    document.getElementById('hello2').textContent += hello;
+                    i+=2
+                    while (j < 10){
+                        if (i < 10){
+                            document.getElementById('hello2').textContent += i + ", ";  
+                            continue hello5;
+                        } 
+                        else{
+                            document.getElementById('hello2').textContent += i + ".";  
+                            break hello5;
+                        }
+                    }
+                } 
+            }
+
+
+            function hello4(){
+
+                var hello = 'hello ';
+                var i = 2;
+                var j = 0;
+                hello4:
+                while (i < 12){
+                    document.getElementById('hello3').textContent += hello;
+                    i+=2
+                    while (j < 10){
+                        if (i < 10){
+                            document.getElementById('hello3').textContent += i + ", ";  
+                            continue hello4;
+                        } 
+                        else{
+                            document.getElementById('hello3').textContent += i + ".";  
+                            break hello4;
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

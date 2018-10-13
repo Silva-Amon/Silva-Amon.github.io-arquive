@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>for in</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h4 onclick="carInf()">Click me to show the car obj info</h4>
+        <p id="car"></p>
+        <h4 onclick="carInf2()">Click me to see the array info</h4>
+        <p id="car2"></p>
+
+
+        <script>
+            var resultObj = '';
+            var resultArray = '';
+            var car = {
+                maker: 'ford',
+                model: 'Mustange'
+            };
+            var car2 = ["ford", "Mustange"];
+            
+            
+            function carInf(){
+                for (var prop in car){
+                    resultObj += 'car.' + prop + ' = ' + car[prop] + '<br>';
+                }
+                document.getElementById('car').innerHTML = resultObj;
+            }
+            
+            function carInf2(){
+                for (var prop in car2){
+                    resultArray += 'car[' + prop + '] = ' + car2[prop] + '<br>';
+                }
+                document.getElementById('car2').innerHTML = resultArray;
+            }
+
+        </script>
+    </body>
+</html>

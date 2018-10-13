@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>for In Vs For Of</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h4 onclick="forInVsForOf()">Click me to see the difference between For...In to For...of</h4>
+        <p id="resultado1">For in: </p>
+        <p id="resultado2">For of: </p>
+
+
+        <script>
+            function forInVsForOf(){
+                var arr = [3, 5, 7];
+                arr.foo = 'hello';
+
+                for (var i in arr){
+                    document.getElementById('resultado1').textContent += i + ", "; 
+                }
+                for (var i of arr){
+                    document.getElementById('resultado2').textContent += i + ", "; 
+                }
+            }
+
+        </script>
+    </body>
+</html>
