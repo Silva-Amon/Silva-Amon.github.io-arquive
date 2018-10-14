@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html lang="US-en">
+    <head>
+        <title>Variables and Arrays</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Variables and Array Examples:</h1>
+        <label for="firstName">First Name:</label>
+        <br>
+        <input id="firstName" type="text">
+        <br>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <br>
+        <input id="lastName" type="text">
+        <br>
+        <p id="joinNames"></p>
+        <button onclick="joinNames()">Join Names</button>
+
+        <p>Fullname Array length: <span id="lengthArray"></span></p>
+
+        <h2>Associative Array</h2>
+        <p>If the array hasn't named index, Only standard Objects. If we try to associete a named index, it will be ignorad.</p>
+        <p>Fullname Associative Array Type:<span id="fullName"></span></p>
+
+        <p>Using a standard object, it will now work</p>
+        <p>Fullname Associative Array Type:<span id="fullNameObj"></span></p>
+
+        <script>
+            function joinNames(){
+
+                //We can use an one line expression too.
+                //var firstName = document.getElementById('firstName').value, lastName = document.getElementById('lastName').value;
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+
+                //var fullName = new Array(firstName, lastName); // Not recomended to use.
+                var fullName = [firstName, lastName]
+                document.getElementById('joinNames').innerHTML = fullName[0] + " " + fullName[1];
+                document.getElementById('lengthArray').textContent = fullName.length;
+                
+                //Associative Array [not work]
+                fullName['middleName'] = 'Bernardo'; //will not work;
+                isArrayType(fullName,'fullName');
+                
+                //Associative Array [will work]
+                var fullNameObj = {
+                    firstName: fullName[0],
+                    middleName: 'Bernardo',
+                    lastName: fullName[1]
+                };                                
+                isArrayType(fullNameObj, 'fullNameObj')
+                //Standard Object
+                function isArrayType(obj, elementId){
+                    if (obj instanceof Array){
+                        document.getElementById(elementId).innerHTML = "It's yet an Array object! =O!" + "<br><p>Values:</p>" + obj;
+                    }
+                    else{
+                        var values = '';
+                        for (var propName in obj){
+                            values += obj[propName]+" ";
+                        }
+                        document.getElementById(elementId).innerHTML = "It's now a standard object! =D!" + "<br><p>Values: " + values + "</p>";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
