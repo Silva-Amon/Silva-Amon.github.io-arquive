@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Obj</title>
+    </head>
+    <body>
+        <p>Wood Chair informations:</p>
+        <ul id="woodChair"></ul>
+        <p>Plastic Chair informations:</p>
+        <ul id="plastChair"></ul>
+
+        <script>
+            // ---CREATING A OBJECT---
+            class Chair{
+                constructor(width, height, weight, age){
+                    this.width = width;
+                    this.height = height;
+                    this.weight = weight;
+                    this.age = age;
+
+                }
+
+                durability() {
+                    if (this.age <= 2){
+                        console.log("it will endure for about 2 more years.");
+                    }else{
+                        console.log("it will endure not so longer");
+                    };
+                }
+                allInfo(){
+                    var info = "";
+                    for (var prop in this){
+                        info += "<li>" + prop + ": " + this[prop] + ", </li>";
+                    }
+                    info = info.substring(0,info.length-7);
+                    info += ". </li>";
+                    return info;
+                }
+            }
+
+            var woodChair = new Chair(0.5,1,2,5);
+            woodChair.durability();
+            console.log(woodChair.allInfo());
+            
+            document.getElementById("woodChair").innerHTML = "<strong>" + woodChair.allInfo() + "</strong>";
+
+            //---INHERITANCE---
+            class PlasticChair extends Chair{
+                constructor(width, height, weight, age, brand){
+                    //We can make more readable adding the super() operator
+                    super(width, height, weight, age);
+                    // the "_" is put before the brand to make difference between the property and its getter and setter.
+                    this._brand = brand;
+                }
+                get brand(){
+                    return this._brand;
+                }
+                set brand(newBrand){
+                    this._brand = "Made by \"" + newBrand + "\"";
+                }
+            }
+            var childrenChair = new PlasticChair(0.3,0.5,2,1,"Mattel");
+
+            childrenChair.durability();
+
+            childrenChair.brand = "Toy Story"
+            console.log(childrenChair.brand);
+            document.getElementById("plastChair").innerHTML = "<strong>" + childrenChair.allInfo() + "</strong>"
+
+
+        </script>
+    </body>
+</html>

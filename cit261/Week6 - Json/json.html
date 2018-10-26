@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>JSON Parse, Stringify</h1>
+        <p id="stringify">Stringified JavaScript Object to Json: </p>
+        <p id="parse">Parse JSON to JavaScript Object: </p>
+        <hr>
+        <p id="parse2">Parse JSON to JavaScript Object, but it will subtract all number to 1: </p>
+        <p id="stringify2">The stringified JavaScript Object will change the word 'table' to 'chair': </p>
+        <script>
+            //creating an object
+            var obj = {
+                kind:"table",
+                width:12,
+                height:15
+            };
+
+            //strigifying it
+            var objStr = JSON.stringify(obj);
+
+            //parsing it
+            var ObjAgain = JSON.parse(objStr);
+
+            //print strigified obj
+            document.getElementById("stringify").innerHTML += "<strong>" + objStr + "</strong>";
+            console.log(objStr);
+
+            //print parsed strigified obj
+            document.getElementById("parse").innerHTML += "<strong>" + ObjAgain + "</strong>";
+            console.log(ObjAgain);
+
+            /* --- Using other parameters in JSON.parse() and
+            JSON.stringify --- */
+
+            //It will subtract all the numbers typed to 1.
+
+            var ObjAgain = JSON.parse(objStr, (key, value) => {
+                if (typeof value === 'number'){
+                    return value-1; 
+                }
+                return value;
+            });
+            document.getElementById("parse2").innerHTML += "<strong>" + ObjAgain + "</strong>";
+            console.log(ObjAgain);
+
+            //It will replace the word 'table' to the word 'chair'
+            function replaceWord(key, value){
+                if (value === 'table'){
+                    return 'chair';
+                }
+                return value;
+            }
+
+            objStr = JSON.stringify(ObjAgain, replaceWord);
+            document.getElementById("stringify2").innerHTML += "<strong>" + objStr + "</strong>";
+        </script>
+    </body>
+</html>

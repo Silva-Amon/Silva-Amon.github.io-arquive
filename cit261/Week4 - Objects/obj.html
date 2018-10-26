@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Obj</title>
+    </head>
+    <body>
+        <p><strong>Phone Info: </strong><span  id="phone"></span></p>
+        <p><strong>Iphone Info: </strong><span  id="iphone"></span></p>
+        <p><strong>Person Info: </strong><span  id="person"></span></p>
+        <p><strong>Functionary Info: </strong><span  id="functionary"></span></p>
+        <script>
+            // ---CREATING A OBJECT---
+
+            //LITERAL FORM
+
+            var phone = {
+                brand:"Motorola", 
+                model:"Moto G",
+                //Adding a method to the object
+                inf: function(){
+                    return "Brand: " + this.brand
+                        + ", Model: " + this.model + ".";
+                },
+                //Setter
+                set setBrand(brand){
+                    this.brand = brand;
+                },
+                set setModel(model){
+                    this.model = model;
+                },
+                //Getter
+                get getBrand(){
+                    return this.brand;
+                },
+                get getModel(){
+                    return this.model;
+                }
+
+            };
+            phone.setBrand = "LG";
+            phone.setModel = "K10"
+            console.log(phone.inf());
+            console.log(phone.getBrand);
+            document.getElementById("phone").textContent += phone.inf();
+
+
+
+            //With the keyword new
+            var phoneIphoneX = new Object();
+            phoneIphoneX.brand = "Apple";
+            phoneIphoneX["model"] = "X";
+
+            //using Object.defineProperty().
+            Object.defineProperty(phoneIphoneX,"inf",{
+                get: function(){
+                    return "Brand: " + this.brand
+                        + ", Model: " + this.model + ".";
+                }
+            });
+            console.log(phoneIphoneX["inf"]);
+            document.getElementById("iphone").textContent += phoneIphoneX.inf;
+            
+            //Object Constructor
+            function Person(firstName, lastName, age){
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+
+                this.fullName = function(){
+                    return firstName + " " + lastName;
+                }
+                this.bio = function(){
+                    return this.fullName() + " has " + this.age + " years old, and like programming JavaScript. =)";
+                }
+            }
+            var I = new Person("Amon", "Silva", "23");
+            console.log(I.bio());
+            document.getElementById("person").textContent += I.bio();
+            
+            //adding property to constructor, not only to a specific obj.
+            Person.prototype.nationality = "Brazilian";
+            console.log(I.nationality);
+
+            //Inheritance
+            function Functionary(firstName, lastName, age, wage){
+                //inheriting all the properies in Person
+                Person.call(this, firstName, lastName, age);
+
+                this.wage = wage;
+
+                //But Functionary haven't the nationality prototype, so we must add all Person prototype to him.
+                Functionary.prototype = Object.create(Person.prototype); // this.prototype = new Person.prototype is the same, probably.
+                
+                //But if we search for who is the Funcionary constructor, it will point to Person. To avoid problems and improve the bug, we must set it constructor to itself.
+
+                Functionary.prototype.constructor = Functionary;
+
+                //Now, all the inheritance is done ;D
+                
+                //overridden super methods
+                this.bio = function(){
+                    return this.fullName() + " has " + this.age + " years old, and work programming JavaScript. =D";
+                }
+                
+            }
+            var lucasFunc = new Functionary("Lucas", "Oaks", "36", "$3,600.00");
+            console.log(lucasFunc.fullName());
+            console.log(lucasFunc.wage);
+            document.getElementById("functionary").textContent = lucasFunc.bio();
+            
+            
+        </script>
+    </body>
+</html>
