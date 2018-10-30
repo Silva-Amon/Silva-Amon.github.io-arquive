@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local and Session Storage</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Local Storage API</h1>
+        <button onclick="store()">Store click(s)</button>
+        <p>Clicks storaged as localStorage: <span id="localStorage"></span></p>
+        <p>Clicks storaged as sessionStorage: <span id="sessionStorage"></span></p>
+
+        <h1>Storaging Arrays, Associative Arrays and Objects</h1>
+        
+        <p>Array storaged: <span id="arrayStr"></span></p>
+        <p>Array[1] retrieved: <span id="arrayRet"></span></p>
+        
+        <p>Associative Array storaged: <span id="assArrayStr"></span></p>
+        <p>Associative Array[juice] retrieved: <span id="assArrayRet"></span></p>
+        
+        <p>Object storaged: <span id="objStr"></span></p>
+        <p>Object[name] retrieved: <span id="objRet"></span></p>
+        
+        <button onclick="retriveStorage()">Retrive this storage</button>
+        <script>
+            if (typeof(Storage) !== "undefined"){
+
+                function store(){
+                    //Local Storage
+                    //                    localStorage.removeItem("localClick");
+                    if (localStorage.localClick){ //if localClick exist
+                        localStorage.setItem("localClick", Number(localStorage.localClick) + 1);
+                        document.getElementById("localStorage").textContent = localStorage.localClick;
+                    } else{
+                        localStorage.localClick = 1; //We can set a value using this way or using the .setItem methode.
+                        document.getElementById("localStorage").textContent = localStorage.localClick;
+                    }
+                    //Session Storage
+                    //                    sessionStorage.removeItem("sessionClick");
+                    if (sessionStorage.sessionClick){
+                        sessionStorage.setItem("sessionClick", Number(sessionStorage.sessionClick) + 1);
+                        document.getElementById("sessionStorage").textContent = sessionStorage.sessionClick;
+                    } else{
+                        sessionStorage.sessionClick = 1;
+                        document.getElementById("sessionStorage").textContent = sessionStorage.sessionClick;
+                    }
+                }
+
+                var array = ["been", "popcorn", "meat"];
+                var assArray = {
+                    "food":"meat",
+                    "juice":"orange",
+                    "dessert":"pie",
+                    "time":12
+                };
+                var obj = {
+                    name: "Amon",
+                    age: "23",
+                    nationality: "Brazilian"
+                };
+                
+                function retriveStorage(){
+                    
+                    //--Saving Array, Associative Array and Object to local storage.--
+                    
+                    //Stringifying them because storage API only store strings.
+                    var arrayStr = JSON.stringify(array);
+                    var assArrayStr = JSON.stringify(assArray);
+                    var objStr = JSON.stringify(obj);
+                    
+                    //Storing them in local Storage.
+                    localStorage.setItem("array", arrayStr);
+                    localStorage.setItem("assArray", assArrayStr);
+                    localStorage.setItem("obj", objStr);
+                    
+                    document.getElementById("arrayStr").textContent = localStorage.array;
+                    document.getElementById("assArrayStr").textContent = localStorage.assArrayStr;
+                    document.getElementById("objStr").textContent = localStorage.obj;
+                    
+                    //changing their values only for debug purposes
+                    array.push("debug");
+                    assArray["time"] = 12;
+                    obj.name = "Aline";
+                    console.log(array);
+                    console.log(assArray);
+                    console.log(obj);
+                    console.log("--");
+                    
+                    //--Retrieving them--
+                    
+                    //parsing the stringified elements to their previous variables.
+                    array = JSON.parse(localStorage.array);
+                    assArray = JSON.parse(localStorage.assArray);
+                    obj = JSON.parse(localStorage.obj);
+                    
+                    document.getElementById("arrayRet").textContent = array[1];
+                    document.getElementById("assArrayRet").textContent = assArray["juice"];
+                    document.getElementById("objRet").textContent = obj["name"];
+                    
+                    //comparing values with the changed values before for debug purposes
+                    console.log(array);
+                    console.log(assArray);
+                    console.log(obj);
+                    console.log("--");
+                    
+                }
+            } //else{
+            //some code for unsupported browser.
+            //}
+        </script>
+    </body>
+</html>
