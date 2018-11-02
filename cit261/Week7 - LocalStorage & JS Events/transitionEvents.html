@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition Event</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="transitionTime">Time transition has runned for </p>
+        <div>Transition Manipulation</div>
+        <style>
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                font-size: 24px;
+                position: relative;
+                width: 300px;
+                height: 200px;
+                border: 1px solid black;
+                
+                top:0px;
+                left: 0px;
+                
+                transition: width 2s;
+            }
+            div:hover{
+                width:400px;
+            }
+        </style>
+        <script>
+            var div = document.getElementsByTagName("div")[0];
+            
+            div.addEventListener("transitionstart", transitionStart, false);
+            div.addEventListener('transitionrun', transitionrun, false);
+            div.addEventListener("transitionend", transitionend, false);
+            
+            function transitionStart(event){
+                this.textContent = "The transition in \"" + event.propertyName + "\" started.";
+                document.getElementById("transitionTime").textContent = "Time transition has runned for " + event.elapsedTime + "s";
+            }
+            function transitionrun(event){
+                console.log("Time transition is running");
+            }
+            function transitionend(event){
+                this.textContent = "The transition in \"" + event.propertyName + "\" ended.";
+                document.getElementById("transitionTime").textContent = "Time transition has runned for " + event.elapsedTime + "s";
+            }
+        </script>
+    </body>
+</html>

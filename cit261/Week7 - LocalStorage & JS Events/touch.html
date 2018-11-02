@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Touch Events</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 style="border: 1px solid black; width: 450px; height: 50px; text-align: center; position: absolute; left: 0px; top:0px; ">Move me</h1>
+        <script>
+            window.onload = function(){ //trigger when the the object is totally loaded
+
+                var h1 = document.getElementsByTagName("h1")[0];
+
+                var startXPos = 0;
+                var startYPos = 0;
+                var leftPos = 0;
+                var topPos = 0;
+                var disPosX = 0;
+                var disPosY = 0;
+                var touchObj = null;
+
+                h1.addEventListener("touchstart", handleStart, false);
+                h1.addEventListener("touchmove", handleMoved, false);
+                h1.addEventListener("touchend", function(){
+                    h1.textContent = "You stopped to touch me, uffa!";
+                }, false);
+                
+                function handleStart(ev){
+                    h1.textContent = "You touched me!";
+                    touchObj = ev.changedTouches[0];
+                    leftPos = parseInt(h1.style.left);
+                    topPos = parseInt(h1.style.top);
+                    startYPos = parseInt(touchObj.clientY);
+                    startXPos = parseInt(touchObj.clientX);
+                    ev.preventDefault();
+                }
+
+                function handleMoved(ev){
+                    h1.textContent = "Where are you taking me?";
+                    touchObj = ev.changedTouches[0];
+                    var disPosX = parseInt(touchObj.clientX) - startXPos;
+                    var disPosY = parseInt(touchObj.clientY) - startYPos;
+                    h1.style.left = leftPos + disPosX  + 'px';
+                    h1.style.top = topPos + disPosY + 'px';
+                    ev.preventDefault();
+                }
+            }
+
+        </script>
+    </body>
+</html>

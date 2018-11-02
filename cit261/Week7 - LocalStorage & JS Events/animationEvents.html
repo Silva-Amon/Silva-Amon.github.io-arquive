@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Event</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="iteration">Iteration(s): <p>
+        <p id="animationTime">Time animation has been running: </p>
+        <div>Animation Manipulation</div>
+        <style>
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                font-size: 24px;
+                position: relative;
+                width: 300px;
+                height: 200px;
+                border: 1px solid black;
+                
+                top:0px;
+                left: 0px;
+                
+                animation-name: move;
+                animation-duration: 2s;
+                animation-iteration-count: 3;
+                animation-timing-function: ease-in;
+                animation-direction: alternate;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes move{
+                from{
+                    background-color: darkgray;
+                    top:30;
+                    left:40px;
+                }
+                   
+                to{
+                    background-color: deepskyblue;
+                    top: 60px;
+                    left: 100px;
+                }
+            }
+        </style>
+        <script>
+            var iteration = 0;
+            var div = document.getElementsByTagName("div")[0];
+            
+            div.addEventListener("animationstart", animationStart, false);
+            div.addEventListener("animationiteration", animationIteration, false);
+            div.addEventListener("animationend", animationend, false);
+            
+            function animationStart(event){
+                this.textContent = "The animation \"" + event.animationName + "\" started";
+                 document.getElementById("animationTime").textContent = "Time animation has been running: " + event.elapsedTime + "s";
+            }
+            function animationIteration(event){
+                iteration++;
+                document.getElementById("iteration").textContent = "Iteration(s): " + iteration;
+                
+                document.getElementById("animationTime").textContent = "Time animation has been running: " + event.elapsedTime + "s";
+            }
+            function animationend(event){
+                this.textContent = "The animation \"" + event.animationName + "\" ended";
+                 document.getElementById("animationTime").textContent = "Time animation has been running: " + event.elapsedTime + "s";
+            }
+        </script>
+    </body>
+</html>
