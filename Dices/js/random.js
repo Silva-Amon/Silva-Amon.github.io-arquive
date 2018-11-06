@@ -1,3 +1,5 @@
+
+var preStyle;
 function random(){
     var diceVal = [];
     var i = 0;
@@ -27,20 +29,27 @@ function random(){
     document.getElementById("top").textContent = diceVal[4];
     document.getElementById("bottom").textContent = diceVal[5];
 
-    document.getElementById("cube").style.transform = "rotateX(" + Math.floor(Math.random() * 360) + "deg) rotateY(" + Math.floor(Math.random() * 360) + "deg)";
+    document.getElementById("cube").style.transform = "rotateX(" + Math.floor(Math.random() * 720) + "deg) rotateY(" + Math.floor(Math.random() * 720) + "deg)";
+
+    //    document.getElementById("cube").style.transform = "rotateX(420deg) rotateY(740deg)";
+
+    setTimeout(function(){
+        document.getElementById("cube").style.transform = "rotateX(-84deg)";
+    }, 1500);
 
 }
-
+//mouse click
 document.getElementById("cube").addEventListener("click", function(){
     random();
 });
-var preStyle;
-//move over
+
+//mouse over
 document.getElementById("cube").addEventListener("mouseover", function(){
     preStyle = this.style;
     this.style.transform = "rotateX(-84deg) rotateY(0deg)";
 });
-//move out
+
+//mouse out
 document.getElementById("cube").addEventListener("mouseout", function(){
     this.style = preStyle;
 });

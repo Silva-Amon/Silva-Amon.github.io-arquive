@@ -1,3 +1,12 @@
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting#4407335*/
 .wrapper{ /* 50% for each cube, and be side by side */
     width: 50%;
 }
