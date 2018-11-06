@@ -36,6 +36,10 @@ function random(){
     setTimeout(function(){
         document.getElementById("cube").style.transform = "rotateX(-84deg) rotateY(0deg)";
     }, 1500);
+    
+    setTimeout(function(){
+        document.getElementById("cube").style.transform = "rotateX(-42deg) rotateY(32deg)";
+    }, 6000);
 
 }
 //mouse click
