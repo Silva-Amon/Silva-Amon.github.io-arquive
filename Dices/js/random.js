@@ -34,12 +34,12 @@ function random(){
     //    document.getElementById("cube").style.transform = "rotateX(420deg) rotateY(740deg)";
 
     setTimeout(function(){
-        document.getElementById("cube").style.transform = "rotateX(-84deg) rotateY(0deg)";
+        document.getElementById("cube").style.transform = "rotateX(-84deg)";
     }, 1500);
     
     setTimeout(function(){
         document.getElementById("cube").style.transform = "rotateX(-42deg) rotateY(32deg)";
-    }, 6000);
+    }, 3000);
 
 }
 //mouse click
