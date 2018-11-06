@@ -1,0 +1,99 @@
+.wrapper{ /* 50% for each cube, and be side by side */
+    width: 50%;
+}
+
+.w1{ /* setting perspective to cube1 */
+    perspective: 1000px;
+}
+/*
+
+.w2{  /*setting perspective to cube2
+    perspective: 250px;
+}
+*/
+
+.wrapper h1{
+    text-align: center;
+}
+
+.cube{
+    font-size: 4em;
+    width: 2em;
+    margin: 1.5em auto;
+    transform-style: preserve-3d; /*let the transformed child elements perserve the 3D transformations*/
+    transform: rotateX(-42deg) rotateY(32deg); /*rotate(-40deg, 32deg) */
+    transition: transform 1.5s;
+    cursor: pointer;
+}
+
+.cube:hover{
+    transform: rotateX(-84deg) rotateY(0deg);
+}
+
+.side {
+    position: absolute; /*the element is positioned relative to its first positioned (not static) ancestor element*/
+    width: 2em;
+    height: 2em;
+    background: rgba(51, 204, 51,.5);
+    border: 1px solid rgba(0,0,0,.5);
+    color: white;
+    text-align: center;
+    line-height: 2em;
+
+}
+
+.front{
+    transform: translateZ(1em);
+}
+.top{
+    transform: rotateX(90deg) translateZ(1em);
+}
+.right{
+    transform:rotateY(90deg) translateZ(1em);
+}
+.left{
+    transform: rotateY(-90deg) translateZ(1em);
+}
+.bottom{
+    transform:rotateX(-90deg) translateZ(1em);
+}
+.back{
+    transform: rotateY(-180deg) translateZ(1em);
+}
+/*retrieved from https://codepen.io/HugoGiraudel/pen/GLbca?editors=0100*/
+
+#container{
+    margin-top: 10%;
+    margin-left:auto;
+    margin-right: auto;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    height: 200px;
+    width:200px;
+    text-align: center;
+    line-height: 200px;
+    margin: 15px;
+    background-color: antiquewhite;
+    transition: transform 1s;
+}
+#square1:hover{
+    transform: rotate(720deg);
+}
+#square2:active{
+    transform: translate(5px, 15px);
+}
+#square3{
+    border: none;
+    outline: none;
+}
+#square3:focus{
+    transform: scale(2, 1.2);
+}
+#square4:hover{
+    transform: skew(35deg);
+}
