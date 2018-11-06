@@ -9,6 +9,8 @@ body{
 /*https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting#4407335*/
 .wrapper{ /* 50% for each cube, and be side by side */
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .w1{ /* setting perspective to cube1 */
@@ -17,7 +19,7 @@ body{
 /*
 
 .w2{  /*setting perspective to cube2
-    perspective: 250px;
+perspective: 250px;
 }
 */
 
@@ -68,6 +70,13 @@ body{
 }
 .back{
     transform: rotateY(-180deg) translateZ(1em);
+}
+button{
+    display: block;
+    width: 150px;
+    height: 50px;    
+    margin-left: auto;
+    margin-right: auto;
 }
 /*retrieved from https://codepen.io/HugoGiraudel/pen/GLbca?editors=0100*/
 
