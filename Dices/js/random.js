@@ -34,7 +34,7 @@ function random(){
     //    document.getElementById("cube").style.transform = "rotateX(420deg) rotateY(740deg)";
 
     setTimeout(function(){
-        document.getElementById("cube").style.transform = "rotateX(-84deg)";
+        document.getElementById("cube").style.transform = "rotateX(-84deg) rotateY(0deg)";
     }, 1500);
 
 }
