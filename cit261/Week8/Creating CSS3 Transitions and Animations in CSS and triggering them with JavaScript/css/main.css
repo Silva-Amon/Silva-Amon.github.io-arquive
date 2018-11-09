@@ -1,0 +1,41 @@
+.square{
+    width: 125px;
+    height: 50px;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-top: 25px;
+}
+#square1{
+    background-color: rgb(100,5,255,0.5);
+}
+button{
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* ---- ANIMATION ---- */
+.horizontal{
+    animation-name: keyHorizontal;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes keyHorizontal{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
+/* ---- TRANSITION ---- */
+#square2{
+    background-color: rgb(100,5,255,0.5);
+    transition: transform 1s;
+}
+.rotate:hover{
+    transform: rotate(640deg);
+}

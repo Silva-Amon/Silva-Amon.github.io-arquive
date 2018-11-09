@@ -1,9 +1,6 @@
 function updatePage(){
     var iFramPor;
-    document.getElementById("iFramPor").addEventListener("load", function(){
-        iFramPor = document.getElementById("iFramPor");
-    });    
-    console.log(iFramPor);
+    iFramPor = document.getElementById("iFramPor");
     //    iFramPor = iFramPor.replace("#document","");
 
     //    var porURL = document.getElementById("iFramPor").contentWindow.document.getElementsByTagName("a").href;

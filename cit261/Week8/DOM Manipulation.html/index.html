@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Amon Silva">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <p id="plabel"><strong>Your text: </strong><span id="text" contenteditable="true">Edit me!</span></p>
+        <button onclick="addTextBellow()">Add Text Bellow</button>
+        <button onclick="addTextAbove()">Add Text Above</button>
+        <button onclick="replaceText()">Replace All Texts</button>
+        <button onclick="removeTextAbove()">Remove Text Above</button>
+        <button onclick="removeTextBellow()">Remove Text Bellow</button>
+        
+        <script src="js/changeText.js"></script>
+    </body>
+</html>
