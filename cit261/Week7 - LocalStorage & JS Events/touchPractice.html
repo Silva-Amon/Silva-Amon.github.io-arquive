@@ -17,17 +17,17 @@
                 background-color: red;
             }
         </style>
-        
+
+
         <canvas id="canvas" width="400" height="400" style="border:solid black 1px;">
             You really badly need to use a different browser.
         </canvas>
         <br>
-        <button onclick="window.startup();">Initialize</button>
         <br>
         Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
         <script>
-            function startup() {
-                var el =document.body;
+            window.onload = function startup() {
+                var el = document.getElementsByTagName("canvas")[0];
                 el.addEventListener("touchstart", handleStart, false);
                 el.addEventListener("touchend", handleEnd, false);
                 el.addEventListener("touchcancel", handleCancel, false);
@@ -38,7 +38,7 @@
             var ongoingTouches = new Array;
             function handleStart(evt) {
 
-
+//                document.body.style = "overflow: hidden";
                 //  log("touchstart.");
                 var el = document.getElementsByTagName("canvas")[0];
                 var ctx = el.getContext("2d");
@@ -93,7 +93,7 @@
                 }
             }
             function handleEnd(evt) {
-
+//                document.body.style = "overflow: visible";
                 //  log("touchend/touchleave.");
                 var el = document.getElementsByTagName("canvas")[0];
                 var ctx = el.getContext("2d");
@@ -121,6 +121,7 @@
                 }
             }
             function handleCancel(evt) {
+//                document.body.style = "overflow: visible";
                 evt.preventDefault();
                 log("touchcancel.");
                 var touches = evt.changedTouches;
@@ -172,5 +173,17 @@
                 }
             }
         </script>
+        <style>
+            body {
+                padding: 50px;
+                font-family: sans-serif;
+            }
+
+            #box {
+                width:  100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
     </body>
 </html>
