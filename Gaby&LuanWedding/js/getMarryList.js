@@ -29,23 +29,35 @@ request.onload = function() {
 }
 
 function getPrice(){
-    var total = 0
-    $("#marryList").append("<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>");
-    $(function(){
-        $("#marryList > span").click(function(){
-            if ($(this).hasClass("active2") == false){
-                var valor = $(this).find("#preco").text();
-                total += parseFloat(valor);
-                $("#marryList #total").text("Total: R$" + total.toFixed(2));
-            }
-            else {
-                var valor = $(this).find("#preco").text();
-                total -= parseFloat(valor);
-                $("#marryList #total").text("Total: R$" + total.toFixed(2));
-            }
+    window.onload = function(){
+        var total = 0
+        var marryList = document.querySelector("#marryList");
+        var h2 = "<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>"
+        marryList.innerHTML += h2;
+        //    $("#marryList").append("<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>"); I can delete this line.
 
+        //    window.onload = function(){
+        //        var marryListSpan = document.querySelectorAll("#marryList > span");
+        //        marryListSpan.onclick = function(){
+        //            //...
+        //        };
+        //    };
+        $(function(){
+            $("#marryList > span").click(function(){
+                if ($(this).hasClass("active2") == false){
+                    var valor = $(this).find("#preco").text();
+                    total += parseFloat(valor);
+                    $("#marryList #total").text("Total: R$" + total.toFixed(2));
+                }
+                else {
+                    var valor = $(this).find("#preco").text();
+                    total -= parseFloat(valor);
+                    $("#marryList #total").text("Total: R$" + total.toFixed(2));
+                }
+
+            });
         });
-    });
+    };
 }
 //Terminar de carregar arquivos JSON{
 //
