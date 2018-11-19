@@ -15,7 +15,6 @@
 
 //var header = document.querySelector('#mainGrid section header');
 //var section = document.querySelector('#mainGrid section section');
-window.onload = function(){
     var requestURL = 'json/lista.json';
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -27,21 +26,10 @@ window.onload = function(){
         populateList(lista);
         getPrice();
     }
-}
 
 function getPrice(){
     var total = 0
-    //        var marryList = document.querySelector("#marryList");
-    //        var h2 = "<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>"
-    //        marryList.innerHTML += h2;
-    $("#marryList").append("<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>"); // I can delete this line.
-
-    //    window.onload = function(){
-    //        var marryListSpan = document.querySelectorAll("#marryList > span");
-    //        marryListSpan.onclick = function(){
-    //            //...
-    //        };
-    //    };
+    $("#marryList").append("<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>"); 
 
     $(function(){
         $("#marryList > span").click(function(){
