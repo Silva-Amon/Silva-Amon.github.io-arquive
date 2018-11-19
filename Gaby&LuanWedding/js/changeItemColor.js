@@ -5,7 +5,7 @@ $(function(){
             $(this).toggleClass("active2"); 
             // END Item Selection color change
         });
-    }, 100);
+    }, 1);
 });
 
 

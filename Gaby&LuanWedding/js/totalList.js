@@ -1,12 +1,12 @@
+//Variables and objects
+var $lista = [];
+var total = 0;
+var totalTudo = 0;
+function $listaObj (Produto, Preco){
+    this.Produto = Produto;
+    this.Preco = Preco;
+}
 $(function(){
-    //Variables and objects
-    var $lista = [];
-    var total = 0;
-    var totalTudo = 0;
-    function $listaObj (Produto, Preco){
-        this.Produto = Produto;
-        this.Preco = Preco;
-    }
     $.getJSON("json/lista.json", function(lista){ //populate the array
         $.each(lista.lista, function(id, listObj){
             if ($lista.length < 4){
