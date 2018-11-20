@@ -26,16 +26,15 @@ request.onload = function() {
     populateList(lista);
     getPrice();
 }
-//Change Color
 request.onloadend = function(){
+    //BEGIN Item Selection color change
     $(function(){
         $("main span").click(function(){
             $(this).toggleClass("active2"); 
             // END Item Selection color change
-        }); 
+        });
     });
 }
-
 function getPrice(){
     var total = 0
     $("#marryList").append("<h2 id=total>Total: R$" + total.toFixed(2) + "</h2>"); 
@@ -103,3 +102,4 @@ function populateList(jsonObj) {
     }
 
 }
+
