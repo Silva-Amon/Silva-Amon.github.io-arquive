@@ -15,17 +15,26 @@
 
 //var header = document.querySelector('#mainGrid section header');
 //var section = document.querySelector('#mainGrid section section');
-    var requestURL = 'json/lista.json';
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
+var requestURL = 'json/lista.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
 
-    request.onload = function() {
-        var lista = request.response;
-        populateList(lista);
-        getPrice();
-    }
+request.onload = function() {
+    var lista = request.response;
+    populateList(lista);
+    getPrice();
+}
+//Change Color
+request.onloadend = function(){
+    $(function(){
+        $("main span").click(function(){
+            $(this).toggleClass("active2"); 
+            // END Item Selection color change
+        }); 
+    });
+}
 
 function getPrice(){
     var total = 0
