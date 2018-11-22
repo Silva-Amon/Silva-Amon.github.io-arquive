@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consume JSON</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Retriving a JSON Web Service</h1>
+        <button onclick="requestJSON()">Retrive JSON from the server</button>
+        <div id="result"></div>
+        <script>
+            function requestJSON(){
+                var requestURL = 'chair.json';
+                var request = new XMLHttpRequest();
+                request.open('GET', requestURL);
+                request.responseType = 'json';
+                request.send();
+
+                request.onload = function(){
+                    var chair = request.response;
+                    printJSON(chair);
+                }
+                function printJSON(json){
+                    var p = document.createElement('p');
+                    p.innerHTML = "<strong>Object: </strong>" +  JSON.stringify(json);
+                    document.getElementById('result').appendChild(p);
+                    console.log(p);
+                }
+            }
+        </script>
+    </body>
+</html>
