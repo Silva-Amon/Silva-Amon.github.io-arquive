@@ -1,30 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Consume JSON</title>
+        <title>Search Your Food</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <h1>Retriving a JSON Web Service</h1>
+        <h1>Search your food Information</h1>
+        <label for='txtFood'>Product Name</label>
+        <input type="text" id="txtFood" placeholder="Coke">
         <button onclick="requestJSON()">Retrive JSON from the server</button>
         <div id="result"></div>
         <script>
             function requestJSON(){
-                var requestURL = 'chair.json';
+                var url = window.location.href;
+                var urlSplit = url.split('?',2);
+                var codeParam;
+                var codeText;
+                var codeNumb;
+                var requestURL;
+                var productRequested = false;
+
+                if(urlSplit.length > 1){
+                    codeParam = urlSplit[1];
+                    codeText = codeParam.substr(0,4);
+                    codeNumb = codeParam.substr(5);
+                }
+
+                if (codeText == 'code'){
+                    requestURL = 'https://world.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
+                    console.log(requestURL);
+                    productRequested = true;
+
+                }else{
+                    //food search
+                    var txtFood = document.getElementById("txtFood").value;
+                    requestURL = 'https://world.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
+                }
                 var request = new XMLHttpRequest();
                 request.open('GET', requestURL);
                 request.responseType = 'json';
                 request.send();
 
                 request.onload = function(){
-                    var chair = request.response;
-                    printJSON(chair);
+                    if (productRequested == false){
+                        var food = request.response;
+                        printJSONSearch(food);
+                    }
+                    else{
+                        var product = request.response;
+                        printJSONProduct(product);
+                    }
                 }
-                function printJSON(json){
-                    var p = document.createElement('p');
-                    p.innerHTML = "<strong>Object: </strong>" +  JSON.stringify(json);
-                    document.getElementById('result').appendChild(p);
-                    console.log(p);
+                request.onloadend = function(){
+
+                }
+                function printJSONSearch(json){
+                    var main = document.getElementsByTagName('main')[0];
+                    if (typeof main !== 'undefined'){
+                        main.innerHTML = json.jqm;
+                    }else{
+                        var main = document.createElement('main');
+                        main.innerHTML = json.jqm;
+                        document.body.appendChild(main);
+                    }
+                }
+                function printJSONProduct(productJSON){
+                    var product = productJSON.product;
+                    var main = document.getElementsByTagName('main')[0];
+                    if (typeof main !== 'undefined'){
+                        main.innerHTML = "<h1>" + product.product_name + "</h1>";
+                    }else{
+                        var main = document.createElement('main');
+                        main.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>";
+                        document.body.appendChild(main);
+                    }
+                    console.log(product);
                 }
             }
         </script>
