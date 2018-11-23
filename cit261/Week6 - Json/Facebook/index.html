@@ -4,6 +4,7 @@
         <title>Search Your Food</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/main.css">
+        
     </head>
     <body>
         <h1>Search your food Information</h1>
@@ -17,11 +18,13 @@
                 if (element.tagName == 'A'){
                     url += element.getAttribute("href");
                     urlSplit = url.split('?',2);
-                }else{
+                }else if(url.includes("?")){
                     urlSplit = url.split('?',2);
                     console.log(urlSplit);
                     urlSplit[1] = urlSplit[0];
                     window.location.href = urlSplit[0];
+                }else{
+                    url = window.location.href;
                 }
                 
                 var codeParam;
@@ -30,7 +33,7 @@
                 var requestURL;
                 var productRequested = false;
 
-                if(urlSplit.length > 1){
+                if(urlSplit != undefined){
                     codeParam = urlSplit[1];
                     codeText = codeParam.substr(0,4);
                     codeNumb = codeParam.substr(5);
