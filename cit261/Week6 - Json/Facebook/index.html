@@ -8,13 +8,22 @@
     <body>
         <h1>Search your food Information</h1>
         <label for='txtFood'>Product Name</label>
-        <input type="text" id="txtFood" placeholder="Coke">
-        <button onclick="requestJSON()">Retrive JSON from the server</button>
+        <input type="text" id="txtFood" placeholder="Nutella">
+        <button onclick="requestJSON(this)">Retrive JSON from the server</button>
         <div id="result"></div>
         <script>
-            function requestJSON(){
+            function requestJSON(element){
                 var url = window.location.href;
-                var urlSplit = url.split('?',2);
+                var urlSplit;
+                if (element.tagName == 'A'){
+                    url += element.getAttribute("href");
+                    urlSplit = url.split('?',2);
+                }else{
+                    urlSplit = url.split('?',2);
+                    urlSplit[1] = urlSplit[0];
+                    window.location.href = urlSplit[0];
+                }
+                
                 var codeParam;
                 var codeText;
                 var codeNumb;
@@ -28,14 +37,13 @@
                 }
 
                 if (codeText == 'code'){
-                    requestURL = 'https://world.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
-                    console.log(requestURL);
+                    requestURL = 'https://us.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
                     productRequested = true;
 
                 }else{
                     //food search
                     var txtFood = document.getElementById("txtFood").value;
-                    requestURL = 'https://world.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
+                    requestURL = 'https://us.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
                 }
                 var request = new XMLHttpRequest();
                 request.open('GET', requestURL);
@@ -54,6 +62,23 @@
                 }
                 request.onloadend = function(){
 
+                    if (productRequested == false){
+                        var imgs = document.getElementsByTagName('img');
+                        var a = document.getElementsByTagName('a');
+
+                        //calling the function if link clicked
+                        for(var i = 0; i < a.length; i++) {
+                            a[i].setAttribute("onclick","requestJSON(this)");
+                        }
+
+                        //loading imgs in data-src
+                        for(var i = 0; i < imgs.length; i++) {
+                            var dataSrc = imgs[i].getAttribute('data-src');
+                            imgs[i].setAttribute('src',''); // remove old src data 
+                            imgs[i].setAttribute('src', dataSrc);
+                        }
+                        // retrieved from https://stackoverflow.com/questions/29578186/use-javascript-to-write-src-attribute-as-data-src-as-page-is-loading
+                    }
                 }
                 function printJSONSearch(json){
                     var main = document.getElementsByTagName('main')[0];
@@ -69,13 +94,12 @@
                     var product = productJSON.product;
                     var main = document.getElementsByTagName('main')[0];
                     if (typeof main !== 'undefined'){
-                        main.innerHTML = "<h1>" + product.product_name + "</h1>";
+                        main.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
                     }else{
                         var main = document.createElement('main');
-                        main.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>";
+                        main.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
                         document.body.appendChild(main);
                     }
-                    console.log(product);
                 }
             }
         </script>
