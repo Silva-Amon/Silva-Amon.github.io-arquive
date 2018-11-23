@@ -20,6 +20,7 @@
                     urlSplit = url.split('?',2);
                 }else{
                     urlSplit = url.split('?',2);
+                    console.log(urlSplit);
                     urlSplit[1] = urlSplit[0];
                     window.location.href = urlSplit[0];
                 }
@@ -37,13 +38,13 @@
                 }
 
                 if (codeText == 'code'){
-                    requestURL = 'https://us.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
+                    requestURL = 'https://world.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
                     productRequested = true;
 
                 }else{
                     //food search
                     var txtFood = document.getElementById("txtFood").value;
-                    requestURL = 'https://us.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
+                    requestURL = 'https://world.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
                 }
                 var request = new XMLHttpRequest();
                 request.open('GET', requestURL);
