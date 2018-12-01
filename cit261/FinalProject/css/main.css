@@ -145,6 +145,7 @@ main ul li a{
     color: rgb(255, 198, 122);
     text-shadow:  2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
     width: 50%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     /*retrieved from https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text*/
