@@ -158,6 +158,7 @@ main ul li:hover{
     margin-right:auto;
     border: 1px dashed black;
     transition: all 0.5s;
+    
 }
 #result img:hover{
     width: 100%;
