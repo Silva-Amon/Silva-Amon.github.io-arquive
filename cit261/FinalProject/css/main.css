@@ -162,9 +162,7 @@ main ul li:hover{
     transition: all 0.5s;
 
 }
-#result img:hover{
-    width: 100%;
-}
+
 #result h3{
     font-size: 22px;
     text-decoration: underline;
