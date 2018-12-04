@@ -16,7 +16,11 @@ function backMenu(){
     //restoring url
     var winUrl = window.location.href;
     var prodPos = winUrl.search("age_product");
-    window.location.href = winUrl.substr(0, prodPos);
+    if (prodPos == -1){
+        prodPos = winUrl.search("#");
+    }
+    window.location.href = winUrl.substr(0, prodPos+1);
+    document.getElementById('loading').style.display = 'none';
 }
 function showAbout(){
     var footer = document.querySelector('footer');

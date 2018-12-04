@@ -1,3 +1,15 @@
+var loadmorelinkHref = '';
+var findLoadInter = setInterval(getLoadHref, 300);
+
+function getLoadHref(){
+    loadmorelinkHref = document.getElementById('loadmorelink').href;
+    console.log(loadmorelinkHref);
+    if (loadmorelinkHref != ''){
+        document.getElementById('loadmorelink').href = '#';
+        clearInterval(findLoadInter);
+    }
+}
+
 function searchResults(){
     var searchContainer = document.getElementById('searchResults');
     searchContainer.style.transform = 'translateX(0px)';
@@ -6,9 +18,11 @@ function searchResults(){
 function requestJSON(element){
     var loading = document.getElementById('loading');
     loading.style.display = 'block';
+
     var url = window.location.href;
     var urlSplit;
-    if (element.tagName == 'A'){
+    if (element.tagName == 'A' && element.id != 'loadmorelink'){
+
         url += element.getAttribute("href");
         urlSplit = url.split('?',2);
     }else if(url.includes("?")){
@@ -35,7 +49,11 @@ function requestJSON(element){
         requestURL = 'https://us.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
         productRequested = true;
 
-    }else{
+    }
+    else if(element.id == 'loadmorelink'){
+        requestURL = loadmorelinkHref;
+    }
+    else{
         //food search
         var txtFood = document.getElementById("txtSearch").value;
         requestURL = 'https://us.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
@@ -67,7 +85,7 @@ function requestJSON(element){
             }
 
             var imgLoading = document.getElementById('loading');
-            
+
             //loading imgs in data-src
             for(var i = 1; i < imgs.length; i++) {
                 var dataSrc = imgs[i].getAttribute('data-src');
@@ -75,9 +93,9 @@ function requestJSON(element){
                 imgs[i].setAttribute('src', dataSrc);
                 imgLoading.setAttribute('src', 'img/loading.png');
             }
-            
+
             // retrieved from https://stackoverflow.com/questions/29578186/use-javascript-to-write-src-attribute-as-data-src-as-page-is-loading
- 
+
             imgLoading.style.display = 'none';
         }
     }
@@ -100,24 +118,24 @@ function printJSONProduct(productJSON){
     var result = document.getElementById('productContent');
     if (typeof result !== 'undefined'){
         var productName = document.getElementById('productName');
-        
+
         productName.textContent = product.product_name;
-        
+
         result.innerHTML = "<img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
-        
+
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
-        
+
         document.getElementById('searchResults').style.transform = 'translateX(0px)';
     }else{
         var result = document.createElement('div');
         result.setAttribute('id', 'productContent');
         result.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
         document.getElementsByTagName('main')[0].appendChild(result);
-        
+
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
-        
-         document.getElementById('searchResults').style.transform = 'translateX(0px)';
+
+        document.getElementById('searchResults').style.transform = 'translateX(0px)';
     }
 }

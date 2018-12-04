@@ -81,6 +81,7 @@ nav button:hover{
 #menu ul li{
     margin: 0;
     padding: 15px;
+    border-bottom: 0.5px solid rgba(120, 120, 120, 0.5);
 }
 #menu ul a{
     color: black;
@@ -144,6 +145,7 @@ nav button:hover{
     top: 0;
     position: sticky;
     width: 100%;
+    padding: 15px 0; 
 }
 #searchResults nav button, footer nav button{
     position: absolute;
@@ -171,6 +173,7 @@ nav button:hover{
     text-align: justify;
     border: 0.5px dashed black;
     padding: 10px;
+    margin-bottom: 15px;
 }
 #result p{
     font-size: 18px;
