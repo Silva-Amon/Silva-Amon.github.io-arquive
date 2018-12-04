@@ -83,8 +83,7 @@ function requestJSON(element){
         }
     }
 }
-
-//Already edited
+//print search
 function printJSONSearch(json){
     var result = document.getElementById('result');
     if (typeof main !== 'undefined'){
@@ -96,23 +95,30 @@ function printJSONSearch(json){
         document.getElementsByTagName('main')[0].appendChild(result);
     }
 }
-
-//hold on
+//print products
 function printJSONProduct(productJSON){
     var product = productJSON.product;
-    var result = document.getElementById('result');
+    var result = document.getElementById('productContent');
     if (typeof result !== 'undefined'){
-        result.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
+        var productName = document.getElementById('productName');
+        
+        productName.textContent = product.product_name;
+        
+        result.innerHTML = "<img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
         
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
+        
+        document.getElementById('searchResults').style.transform = 'translateX(0px)';
     }else{
         var result = document.createElement('div');
-        result.setAttribute('id', 'result');
+        result.setAttribute('id', 'productContent');
         result.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
         document.getElementsByTagName('main')[0].appendChild(result);
         
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
+        
+         document.getElementById('searchResults').style.transform = 'translateX(0px)';
     }
 }

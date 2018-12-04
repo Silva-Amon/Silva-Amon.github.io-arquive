@@ -3,6 +3,9 @@
     box-sizing: border-box; 
     font-family: 'Raleway', sans-serif;
 }  
+img {
+    max-width: 100%;
+}
 html{
     background-image: url(../img/background.jpg);
     background-attachment: fixed;
@@ -111,6 +114,7 @@ nav button:hover{
 #searchResults{
     display: block;
     position: fixed;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     height: 100%;
@@ -120,6 +124,14 @@ nav button:hover{
     background-color: white;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 }
+#searchResults h5{
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    margin: 0;
+    margin-left: 10px;
+}
+
 #result p{
     font-size: 18px;
     font-weight: 700;
