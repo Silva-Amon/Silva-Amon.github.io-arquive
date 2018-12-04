@@ -35,7 +35,11 @@
         <main id="main">
             <aside id='menu'>
                 <button id="closeSideMenu" onclick="closeSideMenu()">X</button>
-                <div>Icons made by <a href="https://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                <ul>
+                    <a href='#home'><li>Home</li></a>
+                    <a href='#favority'><li onclick="showFavority(); closeSideMenu()">Favority</li></a>
+                    <a href='#about'><li onclick="showAbout(); closeSideMenu()">About</li></a>
+                </ul>
             </aside>
             <div id='search'>
                 <h2>Product information</h2>
@@ -49,10 +53,21 @@
         <div id='searchResults'>
             <nav>
                 <button onclick="backMenu()">&#x2190;</button>
-                <h5 id="productName"></h5></nav>
+                <h5 id="productName"></h5>
+            </nav>
             <div id='productContent'>Conteudo</div>
         </div>
+        <footer>
+            <nav>
+                <button onclick="backMenu()">&#x2190;</button>
+                <h5 id="productName">About</h5>
+            </nav>
+            <p>Developed and Designed by Amon Teotonio Bernardo da Silva</p>
+            <p>Icons (loading icon) made by <a href="https://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+            <p id="author">&copy; Copyright to Amon T. B. da Silva</p>
+        </footer>
         <script src="js/sideMenuToggle.js"></script>
         <script src="js/search.js"></script>
+        <script src="js/wayfind.js"></script>
     </body>
 </html>
