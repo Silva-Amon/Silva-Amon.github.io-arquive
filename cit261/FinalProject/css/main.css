@@ -4,9 +4,12 @@
     font-family: 'Raleway', sans-serif;
 }  
 html{
+/*
     border: 0;
     margin: 0;
     padding: 0;
+*/
+    display: block;
     background-image: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover;
