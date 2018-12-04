@@ -4,7 +4,7 @@
     font-family: 'Raleway', sans-serif;
 }  
 
-html, body{
+body{
     background-image: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: 100% 100%;
