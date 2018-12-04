@@ -21,7 +21,7 @@ header img{
 nav{
     padding: 5px;
     font-size: 30px;
-    background-color: rgba(200,200,200,0.6);
+    background-color: rgba(222,244,133,0.6);
 }
 nav button{
     border: none;
@@ -124,14 +124,38 @@ nav button:hover{
     background-color: white;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 }
+#searchResults nav{
+    top: 0;
+    position: sticky;
+    width: 100%;
+}
+#searchResults nav button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-right: 2px solid rgba(120,120,120, 0.2);
+}
+#searchResults nav button:hover{
+    transform: rotate(0deg);
+}
 #searchResults h5{
-    display: inline-block;
+    display: block;
     width: 70%;
     text-align: center;
-    margin: 0;
-    margin-left: 10px;
+    margin: 0 auto auto;
 }
-
+#searchResults img{
+    display: block;
+    margin: 15px auto;
+}
+#searchResults p, #searchResults h3{
+    margin: 0 15px 2px;
+}
+#searchResults p{
+    text-align: justify;
+    border: 0.5px dashed black;
+    padding: 10px;
+}
 #result p{
     font-size: 18px;
     font-weight: 700;

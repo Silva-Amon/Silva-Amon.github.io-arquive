@@ -13,7 +13,6 @@ function requestJSON(element){
         urlSplit = url.split('?',2);
     }else if(url.includes("?")){
         urlSplit = url.split('?',2);
-        console.log(urlSplit);
         urlSplit[1] = urlSplit[0];
         window.location.href = urlSplit[0];
     }else{
