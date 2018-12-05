@@ -1,11 +1,15 @@
 var loadmorelinkHref = '';
+var loadBool = true;
+var loadLinkClick = 0;  //if 0, it will update the div content, and not the ul
 var findLoadInter = setInterval(getLoadHref, 300);
 
 function getLoadHref(){
-    loadmorelinkHref = document.getElementById('loadmorelink').href;
-    console.log(loadmorelinkHref);
-    if (loadmorelinkHref != ''){
+
+    if (loadBool || loadmorelinkHref.search('index.html#') > -1){
+        loadmorelinkHref = document.getElementById('loadmorelink').href;
+
         document.getElementById('loadmorelink').href = '#';
+        loadBool = false;
         clearInterval(findLoadInter);
     }
 }
@@ -16,6 +20,7 @@ function searchResults(){
 }
 
 function requestJSON(element){
+
     var loading = document.getElementById('loading');
     loading.style.display = 'block';
 
@@ -44,17 +49,26 @@ function requestJSON(element){
         codeText = codeParam.substr(0,4);
         codeNumb = codeParam.substr(5);
     }
-
+    //request food from the li clicked
     if (codeText == 'code'){
         requestURL = 'https://us.openfoodfacts.org/api/v0/product/' + codeNumb + '.json';
         productRequested = true;
 
     }
+    //load more link
     else if(element.id == 'loadmorelink'){
         requestURL = loadmorelinkHref;
+        loadmorelinkHref = '';
+        loadBool = true;
+        loadLinkClick = 1;
+        findLoadInter = setInterval(getLoadHref, 300);
     }
     else{
-        //food search
+        //food search button
+        loadmorelinkHref = '';
+        loadBool = true;
+        loadLinkClick = 0;
+        findLoadInter = setInterval(getLoadHref, 300);
         var txtFood = document.getElementById("txtSearch").value;
         requestURL = 'https://us.openfoodfacts.org/cgi/search.pl?search_terms='+ txtFood + '&search_simple=1&jqm=1';
     }
@@ -102,14 +116,27 @@ function requestJSON(element){
 }
 //print search
 function printJSONSearch(json){
-    var result = document.getElementById('result');
-    if (typeof main !== 'undefined'){
-        result.innerHTML = json.jqm;
-    }else{
-        var result = document.createElement('div');
-        result.setAttribute('id', 'result');
-        result.innerHTML = json.jqm;
-        document.getElementsByTagName('main')[0].appendChild(result);
+    if (loadLinkClick == 0){
+        var result = document.getElementById('result');
+        if (typeof result !== 'undefined'){
+            result.innerHTML = json.jqm;
+        }else{
+            var result = document.createElement('div');
+            result.setAttribute('id', 'result');
+            result.innerHTML = json.jqm;
+            document.getElementsByTagName('main')[0].appendChild(result);
+        }
+    } else{
+        var result = document.querySelector('#result ul');
+        if (typeof result !== 'undefined'){
+            var jsonFilter = json.jqm.substr(9);
+            result.innerHTML = jsonFilter;
+        }else{
+            var result = document.createElement('div');
+            result.setAttribute('id', 'result');
+            result.innerHTML = json.jqm;
+            document.getElementsByTagName('main')[0].appendChild(result);
+        }
     }
 }
 //print products
