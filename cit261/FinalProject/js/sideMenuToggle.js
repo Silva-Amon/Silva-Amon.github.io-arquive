@@ -13,6 +13,11 @@ function backMenu(){
     var footer = document.querySelector('footer');
     footer.style.transform = 'translateX(1024px)'; 
     
+    setTimeout(function(){
+       footer.style.display = 'none'; 
+        searchResults.style.display = 'none';
+    }, 300);
+    
     //restoring url
     var winUrl = window.location.href;
     var prodPos = winUrl.search("age_product");
@@ -24,5 +29,9 @@ function backMenu(){
 }
 function showAbout(){
     var footer = document.querySelector('footer');
-    footer.style.transform = 'translateX(0px)'; 
+    footer.style.display = 'block';  
+    setTimeout(function(){
+       footer.style.transform = 'translateX(0px)';  
+    }, 300);
+     
 }

@@ -153,7 +153,13 @@ function printJSONProduct(productJSON){
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
 
-        document.getElementById('searchResults').style.transform = 'translateX(0px)';
+        var searchResults = document.getElementById('searchResults');
+
+        searchResults.style.display = 'block';  
+        setTimeout(function(){
+            searchResults.style.transform = 'translateX(0px)';  
+        }, 300); 
+
     }else{
         var result = document.createElement('div');
         result.setAttribute('id', 'productContent');
@@ -163,6 +169,11 @@ function printJSONProduct(productJSON){
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
 
-        document.getElementById('searchResults').style.transform = 'translateX(0px)';
+        var searchResults = document.getElementById('searchResults');
+
+        searchResults.style.display = 'block';  
+        setTimeout(function(){
+            searchResults.style.transform = 'translateX(0px)';  
+        }, 300);
     }
 }

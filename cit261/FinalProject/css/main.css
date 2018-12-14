@@ -145,7 +145,7 @@ nav button:hover{
 /*---------------SEARCH RESULTS STYLE AND SOME FOOTER--------------*/
 
 #searchResults, footer{
-    display: block;
+    display: none;
     position: fixed;
     overflow-y: scroll;
     top: 0;
