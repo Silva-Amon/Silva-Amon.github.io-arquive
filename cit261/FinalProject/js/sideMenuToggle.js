@@ -7,14 +7,14 @@ function closeSideMenu(){
    sideBar.style.transform = 'translateX(-1024px)';
 }
 function backMenu(){
-   
+
    //Getting the options menu and setting them back
    var searchResults = document.getElementById('searchResults');
    searchResults.style.transform = 'translateX(1024px)';
 
    var favority = document.querySelector('#divFavority');
    favority.style.transform = 'translateX(1024px)';
-   
+
    var footer = document.querySelector('footer');
    footer.style.transform = 'translateX(1024px)'; 
 

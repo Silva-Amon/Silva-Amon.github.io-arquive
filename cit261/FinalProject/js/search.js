@@ -21,6 +21,10 @@ function searchResults(){
 
 function requestJSON(element){
 
+    //close fav tab, if it is opened
+    var fav = document.querySelector('#divFavority');
+    fav.style.transform = 'translateX(-1024px)';
+
     var loading = document.getElementById('loading');
     loading.style.display = 'block';
 
@@ -160,6 +164,24 @@ function printJSONProduct(productJSON){
             searchResults.style.transform = 'translateX(0px)';  
         }, 300); 
 
+        //---------------------BEGIN IMAGE FAVORITY RECOGNITION---------------------------------------------
+        var prodCode = getProdCode();
+        var star = document.getElementById('star');
+        //       console.log(prodCode);
+
+        //create array of products from localstorage
+        var products = [];
+        populateProductArray(products);
+
+        //see if the actual product is actualy saved
+        for (var i = 0; i < products.length; i++){
+            if (products[i].code == prodCode){
+                star.src = 'img/star-yellow.png';
+            }else{
+                star.src = 'img/star-void.png';
+            }  
+        }
+        //---------------------END IMAGE FAVORITY RECOGNITION---------------------------------------------
     }else{
         var result = document.createElement('div');
         result.setAttribute('id', 'productContent');
