@@ -9,7 +9,7 @@ setInterval(function(){
             li.classList.add('active');
         }else{
             li.classList.remove('active');
-            if (wayFind == undefined || wayFind == null || wayFind == 'p' || wayFind == ''){
+            if (wayFind == undefined || wayFind == null || wayFind == 'p' || wayFind == '' || wayFind == 'pa'){
                 menuList[0].classList.add('active');
             }
         }

@@ -144,7 +144,7 @@ nav button:hover{
 
 /*---------------SEARCH RESULTS STYLE AND SOME FOOTER--------------*/
 
-#searchResults, footer{
+#searchResults, footer, #divFavority{
     display: none;
     position: fixed;
     overflow-y: scroll;
@@ -157,22 +157,22 @@ nav button:hover{
     background-color: white;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 }
-#searchResults nav, footer nav{
+#searchResults nav, footer nav, #divFavority nav{
     top: 0;
     position: sticky;
     width: 100%;
     padding: 15px 0; 
 }
-#searchResults nav button, footer nav button{
+#searchResults nav button, footer nav button, #divFavority nav button{
     position: absolute;
     top: 0;
     bottom: 0;
     border-right: 2px solid rgba(120,120,120, 0.2);
 }
-#searchResults nav button:hover,  footer nav button:hover{
+#searchResults nav button:hover,  footer nav button:hover, #divFavority nav button:hover{
     transform: rotate(0deg);
 }
-#searchResults h5, footer nav h5{
+#searchResults h5, footer nav h5, #divFavority nav h5{
     display: block;
     width: 70%;
     text-align: center;
@@ -181,6 +181,10 @@ nav button:hover{
 #searchResults img{
     display: block;
     margin: 15px auto;
+}
+#searchResults #star{
+   margin: 15px auto 25px 15px;
+   width: 50px;
 }
 #searchResults p, #searchResults h3{
     margin: 0 15px 2px;
@@ -232,7 +236,6 @@ main ul li:hover{
     transition: all 0.5s;
 
 }
-
 #result h3{
     font-size: 22px;
     text-decoration: underline;
@@ -246,4 +249,22 @@ footer p{
 footer #author{
     margin-top: 90%;
     text-align: center;
+}
+/*-------------------------Favority-------------------------*/
+#divFavority ul{
+   display: flex;
+   list-style: none;
+   flex-flow: row wrap;
+}
+#divFavority ul li{
+   margin: 30px;
+}
+#divFavority ul li img{
+   display: block;
+   vertical-align: middle;
+   width: 64px;
+}
+#divFavority ul li a{
+   display: block;
+   text-decoration: none;
 }
