@@ -106,10 +106,14 @@ function requestJSON(element){
 
             //loading imgs in data-src
             for(var i = 1; i < imgs.length; i++) {
-                var dataSrc = imgs[i].getAttribute('data-src');
-                imgs[i].setAttribute('src',''); // remove old src data 
-                imgs[i].setAttribute('src', dataSrc);
-                imgLoading.setAttribute('src', 'img/loading.png');
+                if (imgs[i].getAttribute('id') != 'star'){
+                    var dataSrc = imgs[i].getAttribute('data-src');
+                    imgs[i].setAttribute('src',''); // remove old src data 
+                    imgs[i].setAttribute('src', dataSrc);
+                    imgLoading.setAttribute('src', 'img/loading.png');
+                }//else{
+//                    console.log('star found');
+//                }
             }
 
             // retrieved from https://stackoverflow.com/questions/29578186/use-javascript-to-write-src-attribute-as-data-src-as-page-is-loading
@@ -159,7 +163,9 @@ function printJSONProduct(productJSON){
 
         var searchResults = document.getElementById('searchResults');
 
-        searchResults.style.display = 'block';  
+        searchResults.style.display = 'block'; 
+
+        //move to the main screen.
         setTimeout(function(){
             searchResults.style.transform = 'translateX(0px)';  
         }, 300); 
@@ -167,16 +173,18 @@ function printJSONProduct(productJSON){
         //---------------------BEGIN IMAGE FAVORITY RECOGNITION---------------------------------------------
         var prodCode = getProdCode();
         var star = document.getElementById('star');
-        //       console.log(prodCode);
+        //        console.log('product code: ' + prodCode);
 
         //create array of products from localstorage
         var products = [];
         populateProductArray(products);
+        //        console.log('products: ',  products);
 
         //see if the actual product is actualy saved
         for (var i = 0; i < products.length; i++){
             if (products[i].code == prodCode){
                 star.src = 'img/star-yellow.png';
+                break;
             }else{
                 star.src = 'img/star-void.png';
             }  

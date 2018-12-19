@@ -253,6 +253,7 @@ footer #author{
 /*-------------------------Favority-------------------------*/
 #divFavority ul{
     display: flex;
+    align-items: center;
     list-style: none;
     flex-flow: row wrap;
 }
