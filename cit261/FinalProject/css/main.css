@@ -183,8 +183,8 @@ nav button:hover{
     margin: 15px auto;
 }
 #searchResults #star{
-   margin: 15px auto 25px 15px;
-   width: 50px;
+    margin: 15px auto 25px 15px;
+    width: 50px;
 }
 #searchResults p, #searchResults h3{
     margin: 0 15px 2px;
@@ -252,19 +252,21 @@ footer #author{
 }
 /*-------------------------Favority-------------------------*/
 #divFavority ul{
-   display: flex;
-   list-style: none;
-   flex-flow: row wrap;
+    display: flex;
+    list-style: none;
+    flex-flow: row wrap;
 }
 #divFavority ul li{
-   margin: 30px;
+    margin: 30px;
 }
 #divFavority ul li img{
-   display: block;
-   vertical-align: middle;
-   width: 64px;
+    display: block;
+    vertical-align: middle;
+    width: 64px;
 }
 #divFavority ul li a{
-   display: block;
-   text-decoration: none;
+    display: block;
+    text-decoration: none;
+    width: 64px;
+    text-align: center;
 }
