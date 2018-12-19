@@ -152,7 +152,7 @@ function printJSONProduct(productJSON){
     var product = productJSON.product;
     var result = document.getElementById('productContent');
     if (typeof result !== 'undefined'){
-        console.log(product);
+//        console.log(product);
         var productName = document.getElementById('productName');
 
         productName.textContent = product.product_name;
@@ -177,7 +177,7 @@ function printJSONProduct(productJSON){
         nutritionData += "<li>Satureted Fat: " + product.nutriments['saturated-fat_100g'] + "</li>";
         nutritionData += "<li>Proteins: " + product.nutriments.proteins_100g + "</li>";
         nutritionData += "<li>Salt: " + product.nutriments.salt_100g + "</li>";
-        nutritionData += "<li>Sodium: " + product.nutriments.sodium_100g + "</li>";
+        nutritionData += "<li>Sodium: " + product.nutriments.sodium_100g.toFixed(2) + "</li>";
         nutritionData += "<li>Sugar: " + product.nutriments.sugars_100g + "</li>";
         nutritionData += "</ul>";
         result.innerHTML += nutritionData;
@@ -218,7 +218,7 @@ function printJSONProduct(productJSON){
         }
         //---------------------END IMAGE FAVORITY RECOGNITION---------------------------------------------
     }else{
-        console.log(product);
+//        console.log(product);
         var result = document.createElement('div');
         result.setAttribute('id', 'productContent');
         result.innerHTML = "<img src='" + product.image_url + "' alt='Food Picture'>";
@@ -240,7 +240,7 @@ function printJSONProduct(productJSON){
         result.innerHTML += "<li>Satureted Fat: " + product.nutriments['saturated-fat_100g'] + "</li>";
         result.innerHTML += "<li>Proteins: " + product.nutriments.proteins_100g + "</li>";
         result.innerHTML += "<li>Salt: " + product.nutriments.salt_100g + "</li>";
-        result.innerHTML += "<li>Sodium: " + product.nutriments.sodium_100g + "</li>";
+        result.innerHTML += "<li>Sodium: " + product.nutriments.sodium_100g.toFixed(2) + "</li>";
         result.innerHTML += "<li>Sugar: " + product.nutriments.sugars_100g + "</li>";
         result.innerHTML += "</ul>";
 
