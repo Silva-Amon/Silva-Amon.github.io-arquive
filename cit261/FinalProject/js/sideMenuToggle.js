@@ -59,3 +59,4 @@ var searchContainer = document.querySelector('#search');
 nav.addEventListener('touchstart', closeSideMenu, false);
 header.addEventListener('touchstart', closeSideMenu, false);
 searchContainer.addEventListener('touchstart', closeSideMenu, false);
+
