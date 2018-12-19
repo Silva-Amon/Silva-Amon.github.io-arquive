@@ -48,3 +48,14 @@ function showFavority(){
       favority.style.transform = 'translateX(0px)';  
    }, 300);
 }
+
+//close side menu when touch some other area.
+var body = document.body;
+var html = body.parentNode;
+var nav = document.querySelector('nav');
+var header = document.querySelector('header');
+var searchContainer = document.querySelector('#search');
+
+nav.addEventListener('touchstart', closeSideMenu, false);
+header.addEventListener('touchstart', closeSideMenu, false);
+searchContainer.addEventListener('touchstart', closeSideMenu, false);

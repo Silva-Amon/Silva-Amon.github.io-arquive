@@ -247,13 +247,17 @@ footer p{
     margin: 15px 15px;
 }
 footer #author{
-    margin-top: 90%;
+    margin-top: 30%;
     text-align: center;
+}
+footer canvas{
+    width: 100%;
 }
 /*-------------------------Favority-------------------------*/
 #divFavority ul{
     display: flex;
     align-items: center;
+    align-content: center;
     list-style: none;
     flex-flow: row wrap;
 }

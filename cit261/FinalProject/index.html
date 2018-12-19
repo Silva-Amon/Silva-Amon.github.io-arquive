@@ -13,7 +13,8 @@
 
       <!-- Getting google fonts -->
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+      
       <!-- normalize -->
       <link href="css/normalize.css" rel="stylesheet">
 
@@ -33,20 +34,23 @@
       <nav>
          <button id='btnHamburger' onclick='sideBarShow()'>&#9776;</button>
       </nav>
+      
       <main id="main">
+         
          <aside id='menu'>
             <button id="closeSideMenu" onclick="closeSideMenu()">X</button>
             <ul>
-               <a href='#home' onclick="closeSideMenu()"><li>Home</li></a>
+               <a href='/' onclick="closeSideMenu()"><li>Home</li></a>
                <a href='#favority'><li onclick="showFavority(); closeSideMenu(); getFav()">Favority</li></a>
                <a href='#about'><li onclick="showAbout(); closeSideMenu()">About</li></a>
             </ul>
          </aside>
+         
          <div id='search'>
             <h2>Product information</h2>
             <label for='txtSearch'>Search by product brand:</label>
             <input type='text' id='txtSearch' placeholder='Ex.: Nutella' title='It will search the product nutrition information by it brand'>
-            <button id="btnSearch" onclick="requestJSON(this)">Search</button>
+            <button id="btnSearch" onclick="requestJSON(this); closeSideMenu()">Search</button>
             <img id='loading' src='img/loading.png' alt="loading">
             <div id='result'></div>
          </div>
@@ -68,7 +72,6 @@
          </nav>
          <ul>
          </ul>
-        
       </div>
       
       <footer>
@@ -77,12 +80,16 @@
             <h5 id="productName">About</h5>
          </nav>
          <p>Developed and Designed by Amon Teotonio Bernardo da Silva</p>
-         <p>Icons (loading icon) made by <a href="https://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
-         <p id="author">&copy; Copyright to Amon T. B. da Silva</p>
+         <p>Icons (loading and star icon) made by <a href="https://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+         <p id="author">Designed and developed by Amon T. B. da Silva</p>
+         <canvas></canvas>
+         <p>&copy; Copyright to Amon T. B. da Silva</p>
       </footer>
       <script src="js/sideMenuToggle.js"></script>
       <script src="js/search.js"></script>
       <script src="js/wayfind.js"></script>
       <script src="js/favority.js"></script>
+      <script src="js/aboutDraw.js"></script>
+      
    </body>
 </html>
