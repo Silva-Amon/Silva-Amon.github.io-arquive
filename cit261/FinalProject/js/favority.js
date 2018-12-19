@@ -50,7 +50,6 @@ function storeFav(){
 
 }
 
-
 function removeFav(){
    //products length
    if(typeof window.localStorage['productIndex'] !== 'undefined'){
@@ -79,7 +78,7 @@ function removeFav(){
 }
 
 function getFav(){
-
+   var favElements = '';
    var products = [];
    var favList = document.querySelector('#divFavority ul');
 
@@ -90,7 +89,8 @@ function getFav(){
    }
 
    for (var i = 0; i < products.length; i++){
-      favList.innerHTML = '<li><a href="#page_product?code='+products[i].code+'" onclick="requestJSON(this)"><img src="'+products[i].imgInfo.src+'" alt="'+products[i].imgInfo.alt+'"> '+products[i].name+'</a></li>';
+      favElements += '<li><a href="#page_product?code='+products[i].code+'" onclick="requestJSON(this)"><img src="'+products[i].imgInfo.src+'" alt="'+products[i].imgInfo.alt+'"> '+products[i].name+'</a></li>'
+      favList.innerHTML = favElements;
    }
    //if no item is found
    if (products.length < 1){
