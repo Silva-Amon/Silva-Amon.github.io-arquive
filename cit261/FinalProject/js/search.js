@@ -177,7 +177,7 @@ function printJSONProduct(productJSON){
         nutritionData += "<li>Satureted Fat: " + product.nutriments['saturated-fat_100g'] + "</li>";
         nutritionData += "<li>Proteins: " + product.nutriments.proteins_100g + "</li>";
         nutritionData += "<li>Salt: " + product.nutriments.salt_100g + "</li>";
-        nutritionData += "<li>Sodium: " + product.nutriments.sodium_100g.toFixed(2) + "</li>";
+        nutritionData += "<li>Sodium: " + parseFloat(product.nutriments.sodium_100g).toFixed(2) + "</li>";
         nutritionData += "<li>Sugar: " + product.nutriments.sugars_100g + "</li>";
         nutritionData += "</ul>";
         result.innerHTML += nutritionData;
@@ -240,7 +240,7 @@ function printJSONProduct(productJSON){
         result.innerHTML += "<li>Satureted Fat: " + product.nutriments['saturated-fat_100g'] + "</li>";
         result.innerHTML += "<li>Proteins: " + product.nutriments.proteins_100g + "</li>";
         result.innerHTML += "<li>Salt: " + product.nutriments.salt_100g + "</li>";
-        result.innerHTML += "<li>Sodium: " + product.nutriments.sodium_100g.toFixed(2) + "</li>";
+        result.innerHTML += "<li>Sodium: " + parseFloat(product.nutriments.sodium_100g).toFixed(2) + "</li>";
         result.innerHTML += "<li>Sugar: " + product.nutriments.sugars_100g + "</li>";
         result.innerHTML += "</ul>";
 
