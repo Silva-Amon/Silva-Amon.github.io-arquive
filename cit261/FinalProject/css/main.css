@@ -250,6 +250,10 @@ footer #author{
     margin-top: 30%;
     text-align: center;
 }
+footer #copyright{
+    margin-top: 10%;
+    text-align: center;
+}
 footer canvas{
     width: 100%;
 }
