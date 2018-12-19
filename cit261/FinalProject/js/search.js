@@ -112,8 +112,8 @@ function requestJSON(element){
                     imgs[i].setAttribute('src', dataSrc);
                     imgLoading.setAttribute('src', 'img/loading.png');
                 }//else{
-//                    console.log('star found');
-//                }
+                //                    console.log('star found');
+                //                }
             }
 
             // retrieved from https://stackoverflow.com/questions/29578186/use-javascript-to-write-src-attribute-as-data-src-as-page-is-loading
@@ -152,11 +152,38 @@ function printJSONProduct(productJSON){
     var product = productJSON.product;
     var result = document.getElementById('productContent');
     if (typeof result !== 'undefined'){
+        console.log(product);
         var productName = document.getElementById('productName');
 
         productName.textContent = product.product_name;
 
-        result.innerHTML = "<img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
+        result.innerHTML = "<img src='" + product.image_url + "' alt='Food Picture'>";
+
+        //Get nutrition levels
+        var nutrientsRates = '<h3>Nutrient Levels</h3>';
+        nutrientsRates += '<ul id="nutrientList">';
+        for (var nutrient in product.nutrient_levels){
+            nutrientsRates += '<li>' + nutrient+': '+product.nutrient_levels[nutrient] + '</li>';
+        }
+        nutrientsRates += '</ul>';
+        result.innerHTML += nutrientsRates;
+
+        //Get nutrition info
+        var nutritionData = '' ;
+        nutritionData += "<h3>Nutrition Data (per 100g)</h3>";
+        nutritionData += "<ul id='nutritionData'>";
+        nutritionData += "<li>Carbohydrates: " + product.nutriments.carbohydrates_100g + "</li>";
+        nutritionData += "<li>Fat: " + product.nutriments['fat_100g'] + "</li>";
+        nutritionData += "<li>Satureted Fat: " + product.nutriments['saturated-fat_100g'] + "</li>";
+        nutritionData += "<li>Proteins: " + product.nutriments.proteins_100g + "</li>";
+        nutritionData += "<li>Salt: " + product.nutriments.salt_100g + "</li>";
+        nutritionData += "<li>Sodium: " + product.nutriments.sodium_100g + "</li>";
+        nutritionData += "<li>Sugar: " + product.nutriments.sugars_100g + "</li>";
+        nutritionData += "</ul>";
+        result.innerHTML += nutritionData;
+
+        //Get ingredients
+        result.innerHTML += "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
 
         var imgLoading = document.getElementById('loading');
         imgLoading.style.display = 'none';
@@ -191,9 +218,35 @@ function printJSONProduct(productJSON){
         }
         //---------------------END IMAGE FAVORITY RECOGNITION---------------------------------------------
     }else{
+        console.log(product);
         var result = document.createElement('div');
         result.setAttribute('id', 'productContent');
-        result.innerHTML = "<h1>" + product.product_name + "</h1><img src='" + product.image_url + "' alt='Food Picture'>" + "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
+        result.innerHTML = "<img src='" + product.image_url + "' alt='Food Picture'>";
+
+        //Get nutrition rates
+        var nutrientsRates = '<h3>Nutrient Levels</h3>';
+        nutrientsRates += '<ul id="nutrientList">';
+        for (var nutrient in product.nutrient_levels){
+            nutrientsRates += '<li>' + nutrient+': '+product.nutrient_levels[nutrient] + '</li>';
+        }
+        nutrientsRates += '</ul>';
+        result.innerHTML += nutrientsRates;
+
+        //Get nutrition info
+        result.innerHTML += "<h3>Nutrition Data (per 100g)</h3>";
+        result.innerHTML += "<ul id='nutritionData'>";
+        result.innerHTML += "<li>Carbohydrates: " + product.nutriments.carbohydrates_100g + "</li>";
+        result.innerHTML += "<li>Fat: " + product.nutriments['fat_100g'] + "</li>";
+        result.innerHTML += "<li>Satureted Fat: " + product.nutriments['saturated-fat_100g'] + "</li>";
+        result.innerHTML += "<li>Proteins: " + product.nutriments.proteins_100g + "</li>";
+        result.innerHTML += "<li>Salt: " + product.nutriments.salt_100g + "</li>";
+        result.innerHTML += "<li>Sodium: " + product.nutriments.sodium_100g + "</li>";
+        result.innerHTML += "<li>Sugar: " + product.nutriments.sugars_100g + "</li>";
+        result.innerHTML += "</ul>";
+
+        //Get ingredients
+        result.innerHTML += "<h3>Ingredients</h3>"+"<p>" + product.ingredients_text + "</p>";
+
         document.getElementsByTagName('main')[0].appendChild(result);
 
         var imgLoading = document.getElementById('loading');
