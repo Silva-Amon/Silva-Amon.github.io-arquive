@@ -103,17 +103,13 @@ function requestJSON(element){
          }
 
          var imgLoading = document.getElementById('loading');
-         var previewImg;
          //loading imgs in data-src
          for(var i = 1; i < imgs.length; i++) {
             if (imgs[i].getAttribute('id') != 'star'){
-               previewImg = imgs[i].getAttribute('src');
                var dataSrc = imgs[i].getAttribute('data-src');
                imgs[i].setAttribute('src',''); // remove old src data 
                imgs[i].setAttribute('src', dataSrc);
                imgLoading.setAttribute('src', 'img/loading.png');
-            }else{
-               imgs[i].setAttribute('src',previewImg);
             }
          }
 
