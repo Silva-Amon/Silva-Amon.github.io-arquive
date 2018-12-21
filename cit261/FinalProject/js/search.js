@@ -23,7 +23,7 @@ function requestJSON(element){
 
    //close fav tab, if it is opened
    var fav = document.querySelector('#divFavority');
-   fav.style.transform = 'translateX(-1024px)';
+   fav.style.transform = 'translateX(1024px)';
 
    var loading = document.getElementById('loading');
    loading.style.display = 'block';
