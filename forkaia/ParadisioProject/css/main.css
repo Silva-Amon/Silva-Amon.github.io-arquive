@@ -12,6 +12,10 @@ html, body, body.pushable > .pusher{
     -o-background-size: cover;
     background-size: cover; 
 }
+body{
+    display:flex;
+    flex-flow: column wrap;
+}
 #userPhoto{
     display: block;
     margin: 5px auto;
@@ -89,6 +93,8 @@ a{
 }
 
 footer{
+    align-self: flex-end;
+    width: 100%;
     margin-top: 35px;
     padding: 5px 0;
     text-align: center;
