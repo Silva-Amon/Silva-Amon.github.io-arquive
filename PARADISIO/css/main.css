@@ -1,0 +1,71 @@
+body, body.pushable > .pusher{
+    background-image: url("../img/background.jpeg");
+    background-size: 100% 100%;
+}
+#userPhoto{
+    display: block;
+    margin: 5px auto;
+    border-radius: 100%;
+    width: 50%;
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(88, 181, 242, 0.6);
+    position: fixed;    
+}
+#hamburgerBtn, #userBtn{
+    font-size: 1.7rem; 
+    margin: 10px;
+    padding: 0;
+    margin-left: 15px;
+    color: #191046;
+    background-color: rgba(88, 181, 242, 0.2);
+    transition: all 0.5s;
+}
+#hamburgerBtn:hover{
+    transform: rotate(90deg);
+}
+#logo{
+    display: block;
+    padding: 70px 5px 5px 0;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 30px;
+}
+label{
+    display: block;
+    font-size: 22px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    padding: 5px;
+    width: 70%;
+    border-radius: 5px;
+}
+main .text{
+    display: block;
+    position: static;
+    margin: 25px 15%;
+    margin-top: 8px;
+    width: 70%;
+}
+main input[type="text"] !important{
+    height: 25px;
+    width: 100%;
+}
+
+#btnSearch{
+    background-color: rgba(253, 215, 78, .8);
+    color: #191046;
+    width: 70%;
+    height: 50px;
+    font-size: 25px;
+    line-height: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    transition: background-color 0.3s;
+}
+#btnSearch:hover{
+    background-color: rgba(253, 215, 78, 1);
+}

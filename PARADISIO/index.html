@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Find the perfect trip with your actual budget.">
+		<meta name="keywords" content="Trip,Travel,Beach,Budget">
+		<meta name="author" content="PARADISIO">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+		<script
+				src="https://code.jquery.com/jquery-3.3.1.min.js"
+				integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+				crossorigin="anonymous"></script>
+		<script src="semantic/dist/semantic.min.js"></script>
+
+		<!--Main/Mobile View-->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+
+		<!--Side Menu bar-->
+		<div class="ui sidebar inverted vertical menu">
+			<img id='userPhoto' src="img/login.png" alt="user picture">
+			<a class="item">
+				Home
+			</a>
+			<a class="item">
+				About
+			</a>
+		</div>
+
+		<nav id="menu">
+			<button id="hamburgerBtn" class="ui button" onclick="showMenu()">&#9776;</button>
+			
+			<button id="userBtn" class="ui icon button">
+				<i class="user icon"></i>
+			</button>
+		</nav>
+		<header>
+			<img id="logo" src="img/logo.png" alt="PARADISIO logo">
+		</header>
+		<main>
+			<form method="get" action="#">
+				<label for="where">Where you go?</label>
+				<div class="ui input text">
+					<input type="text" placeholder="Beach" name="where" id="where">
+				</div>
+				<label for="budget">What's your budget?</label>
+				<div class="ui input text">
+					<input type="text" placeholder="Beach" name="budget" id="budget">
+				</div>
+				<input type="submit" value="Match It" id="btnSearch" class="ui button">
+			</form>
+
+		</main>
+		<script src="js/menu.js"></script>
+	</body>
+</html>
