@@ -1,3 +1,6 @@
 function showMenu(){
-    $('.ui.sidebar').sidebar('toggle');
+    $('#sideMenu.ui.sidebar').sidebar('toggle');
+}
+function showLogin(){
+    $('#sideLogin.ui.sidebar').sidebar('toggle');
 }
