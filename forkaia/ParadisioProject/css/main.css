@@ -1,6 +1,6 @@
 body, body.pushable > .pusher{
     background-image: url("../img/background.jpeg");
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #userPhoto{
     display: block;
@@ -37,7 +37,7 @@ body, body.pushable > .pusher{
 label{
     display: block;
     font-size: 22px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(239, 239, 239, 0.8);
     margin: 0 auto;
     padding: 5px;
     width: 70%;
@@ -46,8 +46,8 @@ label{
 main .text{
     display: block;
     position: static;
-    margin: 25px 15%;
-    margin-top: 8px;
+    margin: 15px 15%;
+    margin-top: 5px;
     width: 70%;
 }
 main input[type="text"] !important{
@@ -76,4 +76,13 @@ a{
 }
 .userName{
     text-align: center;
+}
+footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    padding: 5px 0;
+    width:100%;
+    text-align: center;
+    background-color: rgba(239, 239, 239, 0.6);
 }
