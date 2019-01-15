@@ -3,12 +3,12 @@
   "name": "PARADISIO",
   "icons": [
     {
-      "src": "/forkaia/ParadisioProject/img/logo.png",
+      "src": "/forkaia/ParadisioProject/img/logo3.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/forkaia/ParadisioProject/img/logo.png",
+      "src": "/forkaia/ParadisioProject/img/logo3.png",
       "type": "image/png",
       "sizes": "350x350"
     }
