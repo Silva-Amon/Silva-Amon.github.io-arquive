@@ -1,0 +1,21 @@
+{
+  "short_name": "PARADISIO",
+  "name": "PARADISIO",
+  "icons": [
+    {
+      "src": "/forkaia/ParadisioProject/img/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/forkaia/ParadisioProject/img/logo.png",
+      "type": "image/png",
+      "sizes": "350x350"
+    }
+  ],
+  "start_url": "/forkaia/ParadisioProject/index.html",
+  "background_color": "#58B5F2",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#58B5F2"
+}
