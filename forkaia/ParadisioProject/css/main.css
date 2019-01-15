@@ -1,6 +1,10 @@
+* { 
+    box-sizing: border-box; 
+}  
 html, body, body.pushable > .pusher{
     background-image: url("../img/background.jpeg");
-    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 #userPhoto{
