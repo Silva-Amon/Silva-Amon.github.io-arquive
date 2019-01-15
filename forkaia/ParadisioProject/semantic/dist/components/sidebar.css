@@ -88,7 +88,9 @@
 
 /* Whole Page */
 body.pushable {
-  background: #545454 !important;
+/*  background: #545454 !important;*/
+  background-image: url("../img/background.jpeg");
+  
 }
 
 /* Page Context */
