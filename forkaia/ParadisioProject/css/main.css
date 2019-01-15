@@ -1,11 +1,14 @@
 * { 
     box-sizing: border-box; 
 }  
-html, body, body.pushable > .pusher{
-    background-image: url("../img/background.jpeg");
-    background-attachment: fixed;
+body, body.pushable > .pusher{
+    background: url("../img/background.jpeg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
 }
 #userPhoto{
     display: block;
