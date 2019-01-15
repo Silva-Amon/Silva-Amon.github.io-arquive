@@ -6,7 +6,7 @@ html{
 }
 html, body.pushable > .pusher{
     background: url("../img/background.jpeg") no-repeat center center fixed;
-   -webkit-background-size: cover;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
@@ -89,8 +89,8 @@ a{
 
 /*
 footer{
-    margin-top: 35px;
-    padding: 5px 0;
-    text-align: center;
-    background-color: rgba(239, 239, 239, 0.6);
+margin-top: 35px;
+padding: 5px 0;
+text-align: center;
+background-color: rgba(239, 239, 239, 0.6);
 }*/
