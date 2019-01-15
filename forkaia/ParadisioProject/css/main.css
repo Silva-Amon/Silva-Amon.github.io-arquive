@@ -1,4 +1,4 @@
-body, body.pushable > .pusher{
+html, body, body.pushable > .pusher{
     background-image: url("../img/background.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,12 +78,10 @@ a{
 .userName{
     text-align: center;
 }
+
 footer{
-    position:absolute;
-    left:0px;
-    bottom:0px;
+    margin-top: 35px;
     padding: 5px 0;
-    width:100%;
     text-align: center;
     background-color: rgba(239, 239, 239, 0.6);
 }
