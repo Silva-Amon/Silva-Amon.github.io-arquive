@@ -8,7 +8,7 @@
 		<meta name="author" content="PARADISIO">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="img/logo3.png">
-		
+
 		<!--Semantic UI-->
 		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 		<script
@@ -19,9 +19,13 @@
 
 		<!--Main/Mobile View-->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		
+
+		<!--Manifest-->
+		<meta name="theme-color" content="#58B5F2"/>
+		<link rel="manifest" href="manifest.json">
+
 	</head>
-	
+
 	<body>
 		<!--Side Menu bar-->
 		<div id="sideMenu" class="ui sidebar inverted vertical menu">
@@ -32,7 +36,7 @@
 				About
 			</a>
 		</div>
-		
+
 		<!--Side Menu bar-->
 		<div id="sideLogin" class="ui right sidebar inverted vertical menu">
 			<img id='userPhoto' src="img/login.png" alt="user picture">
@@ -41,11 +45,11 @@
 			<a href="#" class="item">Contributions</a>
 			<a href="#" class="item">Logout</a>
 		</div>
-		
+
 
 		<nav id="menu">
 			<button id="hamburgerBtn" class="ui button" onclick="showMenu()">&#9776;</button>
-			
+
 			<button id="userBtn" class="ui icon button" onclick="showLogin()">
 				<i class="user icon"></i>
 			</button>
@@ -61,7 +65,7 @@
 				</div>
 				<label for="budget">What's your budget?</label>
 				<div class="ui input text">
-					<input type="text" placeholder="$1,200.00" name="budget" id="budget">
+					<input type="number" placeholder="$1,200.00" name="budget" id="budget">
 				</div>
 				<input type="submit" value="Match It" id="btnSearch" class="ui button">
 			</form>
