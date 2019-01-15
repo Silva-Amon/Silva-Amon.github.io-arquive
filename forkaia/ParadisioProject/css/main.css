@@ -3,7 +3,6 @@
 } 
 html{
     height: 100%;
-    overflow: hidden;
 }
 html, body, body.pushable > .pusher{
     background: url("../img/background.jpeg") no-repeat center center fixed;
@@ -88,9 +87,10 @@ a{
     text-align: center;
 }
 
+/*
 footer{
     margin-top: 35px;
     padding: 5px 0;
     text-align: center;
     background-color: rgba(239, 239, 239, 0.6);
-}
+}*/
