@@ -62,7 +62,7 @@
                 <h1 style="text-align: center">Lista de Presentes</h1>
                 <!--List of Gift-->
                 <div class="list-background list-group" id="marryList">
-                    
+
                 </div>
                 <!--List of Gift-->
 
@@ -75,13 +75,39 @@
                     <p><strong>CPF:</strong> 135.356.047-37<p>
                 </div>
                 <div class="inf">
-                    <form method="POST" action="https://formspree.io/amon.bernardo@hotmail.com">
-                        <label><strong>Seu e-mail:</strong> </label>
-                        <input type="email" name="email" placeholder="Seu E-mail">
+                    <form accept-charset="UTF-8" action="https://usebasin.com/f/48366767cb75" method="POST">
+                        <label for="name"><strong>Seu Nome Completo:</strong></label>
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Ex.: Jorge Antônio da Silva" onkeyup="nameChange(this)" required> 
+                        <label for="email"><strong>Seu E-mail:</strong></label>
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Ex.: jorge.a.s@hotmail.com" required>
                         <label><strong>Mensagem:</strong></label>
-                        <textarea name="message" placeholder="Sua Mensage"></textarea>
+                        <textarea class="form-control" id="message" name="message" placeholder="Ex.: Vocês são lindos ♥ !" rows='15' required>Queridos, Gabrielly e Luan.
+
+                            Gostaria de me comprometer a doar os seguintes presentes (ou o valor em dinheiro):
+
+                            Att, </textarea>
+                        <button onclick="submitForms()">Enviar</button>
+                    </form>
+                    
+                    <!--*****************************************************************************************-->
+                    <!-- Send email to Gaby and for me to update the items list (what was give and what wasn't). -->
+                    <!--*****************************************************************************************-->
+                    
+<!--
+                    <form method="POST" action="https://formspree.io/amon.bernardo@hotmail.com" id="form2" hidden>
+                        <label for="name"><strong>Seu Nome Completo:</strong></label>
+                        <input type="text" name="name" id="name2" placeholder="Ex.: Jorge Antônio da Silva" onkeyup="nameChange(this)" required> 
+                        <label for="email"><strong>Seu E-mail:</strong></label>
+                        <input type="email" name="email" id="email2" placeholder="Ex.: jorge.a.s@hotmail.com" required>
+                        <label><strong>Mensagem:</strong></label>
+                        <textarea id="message" name="message2" placeholder="Ex.: Vocês são lindos ♥ !" required>Queridos, Gabrielly e Luan.
+
+                            Gostaria de me comprometer a doar os seguintes presentes (ou o valor em dinheiro):
+
+                            Att, </textarea>
                         <button type="submit">Enviar</button>
                     </form>
+-->
                 </div>
             </div>
 
@@ -136,18 +162,20 @@
 
         <!--Bootstrap-->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
         <!--Current Date-->
-        <script src="js/getMarryList.js"></script>
+        <!--        <script src="js/getMarryList.js"></script>-->
         <script src="js/currentDate.js"></script>
         <script src="js/remainderDays.js"></script>
-<!--        <script src="js/changeItemColor.js"></script>-->
-<!--        <script src="js/totalList.js"></script>-->
+        <!--        <script src="js/changeItemColor.js"></script>-->
+        <!--        <script src="js/totalList.js"></script>-->
         <script src="js/showInf.js"></script>
-        
+        <script src="js/getMarryListReal.js"></script>
+        <script src="js/addToTextArea.js"></script>
+
     </body>
 </html>
