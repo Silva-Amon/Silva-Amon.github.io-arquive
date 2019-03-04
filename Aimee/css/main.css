@@ -144,6 +144,7 @@ textarea{
 
 #solicitarServico:hover{
   background-color: aqua;
+  cursor: pointer;
 }
 
 /* ****************************************** */
