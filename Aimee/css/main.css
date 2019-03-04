@@ -1,3 +1,171 @@
-img{
-   max-width: 100%;
+/* ****************************************** */
+/* ***************** COMMONS **************** */
+/* ****************************************** */
+
+body {padding:2%;}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* animation is slow so you can see it, but probably should be .25 or .15 */
+
+/* HEADER */
+
+header{
+  width: 500px;
+  margin: auto;
+}
+header img{
+  display: block;
+  margin: 5px auto;
+  max-width: 100%;
+}
+
+/* END HEADER*/
+
+
+/* NAV */
+nav{
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /*  width: 70%;*/
+  margin: 20px auto;
+  background-color: aliceblue;
+}
+#btnHamburger{
+  font-size: 18px;
+  /*  margin: 0 auto;*/
+  border: 1px dashed black;
+  width: 50px;
+  height: 30px;
+  background-color: antiquewhite;
+}
+nav ul{
+  display: none;
+  padding: 0;
+  list-style-type: none;
+}
+nav li{
+  display: block;
+}
+nav a{
+  text-align: center;
+  display: block;
+  padding: 15px 15px;
+  text-decoration: none;
+  position: relative;
+
+  /*
+  webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  */
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #f00;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .25s cubic-bezier(.17,.67,.67,.96) 0s;
+  transition: all .25s cubic-bezier(.17,.67,.67,.96) 0s;
+}
+
+nav a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*Code retrieved from https://codepen.io/jbprice/pen/PweOYJ*/
+
+/* END NAV */
+
+/* ****************************************** */
+/* ***************** PORTIFOLIO ************* */
+/* ****************************************** */
+
+iframe{
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.view{
+  display: none;
+  transition: all 0.3s;
+}
+
+
+/* ****************************************** */
+/* ***************** SERVICO **************** */
+/* ****************************************** */
+form{
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input, textarea{
+  width: 100%;
+  display: block;   
+  margin: 5px 0 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid;
+}
+textarea{
+  height: 150px;
+}
+#solicitarServico{
+  margin-top: 20px;
+  height: 60px;
+  background-color: antiquewhite;
+  border: 0.5px dashed lightgreen;
+  transition: all 0.5s;
+}
+
+#solicitarServico:hover{
+  background-color: aqua;
+}
+
+/* ****************************************** */
+/* ***************** BIOGRAFIA **************** */
+/* ****************************************** */
+
+#Biografia{
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  text-align: justify;
+}
+#photoProfile{
+  margin: auto;
+  display: block;
+  max-width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+#Biografia h2{
+  text-align: center;
+}
+#Biografia p{
+ text-indent: 1.5em;
 }

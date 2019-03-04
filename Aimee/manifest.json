@@ -1,0 +1,21 @@
+{
+  "short_name": "PARADISIO",
+  "name": "PARADISIO",
+  "icons": [
+    {
+      "src": "/Paradisio/img/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/Paradisio/img/icon.png",
+      "type": "image/png",
+      "sizes": "350x350"
+    }
+  ],
+  "start_url": "/Paradisio/index.html",
+  "background_color": "#58B5F2",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#58B5F2"
+}

@@ -1,31 +1,118 @@
 <!DOCTYPE html>
 <html lang="en-us">
-   <head>
-      <title>Aimee</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Faça seu projeto de arquitetura com a Aimée">
-      <meta name="keywords" content="arquitetura,projeto,desenho,autocad">
-      <meta name="author" content="Amon T. B. da Silva & Aron R. T. da Silva">
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="img/icon.png">
+    <head>
+        <title>Aimee</title>
+        <meta charset="UTF-8">       
+        <meta name="description" content="Faça seu projeto de arquitetura com a Aimée">
+        <meta name="keywords" content="arquitetura,projeto,desenho,autocad">
+        <meta name="author" content="Amon T. B. da Silva & Aron T. Rodrigues">
 
-      <!--Main/Mobile View-->
-      <link rel="stylesheet" type="text/css" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/icon.png">
+
+        <!--Main/Mobile View-->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <!-- Large View -->
+        <link rel="stylesheet" type="text/css" href="css/largeView.css">
+
+        <!-- Middle View -->
+        <link rel="stylesheet" type="text/css" href="css/middleView.css">
+
+        <!--Manifest-->
+        <meta name="theme-color" content="#58B5F2"/>
+        <link rel="manifest" href="manifest.json">
+
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    </head>
+
+    <body >
+
+        <header>
+            <a href="#Portfolio" onclick="navigate('#Portfolio')">
+                <img id="logo" src="img/Marca(dourado)_animated.svg" alt='logo'>
+            </a>
+        </header>
+        <nav>
+            <button id="btnHamburger" onclick="toggleMenu()">&#9776;</button>
+            <ul>
+                <li>
+                    <a href="#Portfolio" onclick="navigate('#Portfolio')">Portfolio</a>
+                    <a href="#Servico" onclick="navigate('#Servico')">Pedir um Serviço</a>
+                    <a href="#Biografia" onclick="navigate('#Biografia')">Biografia</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <!---------------------------------------->
+            <!------------- PORTFOLIO ---------------->
+            <!---------------------------------------->
+
+            <div id='Portfolio' class="view">
+                <iframe width="760px" height="500px" src="https://sway.office.com/s/x1UNx2R7s3JNUpLC/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
+            </div>
+
+            <!---------------------------------------->
+            <!--------------- SERVICO ---------------->
+            <!---------------------------------------->
+
+            <div id='Servico' class="view">
+                <form action="#" method="get">
+
+                    <label for="name">Nome Completo:
+                        <input id="name" name="name" type="text" required placeholder="Ex.: João da Silva"></label>
 
 
-      <!-- Large View -->
-      <link rel="stylesheet" type="text/css" href="css/largeView.css">
+                    <label for="telefone">Telefone:
+                        <input id="telefone" name="telefone" type="tel" required placeholder="Ex.: João da Silva"></label>
 
-      <!--Manifest-->
-      <meta name="theme-color" content="#58B5F2"/>
-      <link rel="manifest" href="manifest.json">
-   </head>
 
-   <body >
+                    <label for="email">E-mail:
+                        <input id="email" name="email" type="email" required placeholder="Ex.: João da Silva">
+                    </label>
 
-      <img src="img/desenhando_animated.svg" alt='logo'>
-      
-      <iframe width="760px" height="500px" src="https://sway.office.com/s/x1UNx2R7s3JNUpLC/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
-   </body>
+
+                    <label for="descricao">Descrição da requisição:</label>
+                    <textarea id="descricao" placeholder="Ex.: Boa tarde, Aimée. Eu gostaria de requisitar seus serviços para construições civís/Construção da minha casa."></textarea>
+                    <button id='solicitarServico'type="submit">Solicitar Serviço</button>
+                </form>
+            </div>
+
+            <!---------------------------------------->
+            <!--------------- BIOGRAFIA -------------->
+            <!---------------------------------------->
+
+            <div id='Biografia' class="view">
+                <picture>
+                    <img id="photoProfile" src="img/BioPorfile.jpg" alt="Minha foto de perfil">
+                </picture>
+                <h2>Aimée Bernardo</h2>
+                <p>Meu nome é Aimée. Sou estudante de arquitetura e urbanismo, com cursos de especiliazação em Autocad, Sketchup, Render.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus facilisis neque eu ultrices. Pellentesque sollicitudin risus interdum ex ullamcorper lobortis. Quisque pretium, eros eu posuere semper, tortor metus ornare nulla, in vehicula nunc ipsum sed lacus. Sed a felis eleifend, imperdiet nulla ut, aliquet dolor. Vestibulum quis ex tincidunt, varius tellus eget, dictum nibh. Ut in orci id lectus luctus viverra. Donec velit tellus, molestie a massa at, auctor dictum arcu. Aliquam facilisis iaculis massa non accumsan. Morbi suscipit diam sapien, sit amet pellentesque leo mollis vulputate. Aliquam non mauris non enim aliquet consectetur sed ut erat. Maecenas ac massa dapibus, gravida nisl id, interdum ante. Vivamus non eros enim. Vivamus gravida viverra rhoncus. Cras sed dui eu velit scelerisque ullamcorper. Sed imperdiet semper nisl vel viverra.</p>
+                <p>Vivamus nec nisi porta, consectetur dui a, elementum lorem. Pellentesque hendrerit quam eget tempor dignissim. Nunc ut nulla lectus. Sed a fermentum quam. Ut non urna vel arcu blandit volutpat. Aliquam sit amet augue ut nibh cursus elementum vitae ac urna. Curabitur vestibulum massa nec pellentesque rhoncus. Quisque sem purus, efficitur quis ipsum quis, iaculis maximus eros. Phasellus nunc felis, sollicitudin a turpis vitae, pulvinar pretium odio. Morbi eu odio turpis. Maecenas lobortis massa ut ligula pretium, in porta quam elementum. Morbi vel purus sapien. Nam sit amet mattis dolor. Proin ut enim aliquam, facilisis ex sed, dictum lectus. Morbi porttitor vulputate elementum. Sed vel tellus sit amet ligula sollicitudin finibus.</p>
+            </div>
+        </main>
+
+
+
+        <!-- Service Worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                console.log("Will the service worker register?");
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(function(reg){
+                    console.log("Yes, it did.");
+                }).catch(function(err) {
+                    console.log("No it didn't. This happened: ", err)
+                });
+            }
+        </script>
+
+        <!-- My JS Code -->
+        <script src="js/loadImage.js"></script>
+        <script src="js/ToggleMenu.js"></script>
+        <script src="js/hashPageNavigation.js"></script>
+    </body>
 </html>
