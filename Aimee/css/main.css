@@ -2,7 +2,7 @@
 /* ***************** COMMONS **************** */
 /* ****************************************** */
 
-body {padding:2%;}
+body {padding:2%; background-color: brown;}
 
 * {
   -webkit-box-sizing: border-box;
@@ -35,7 +35,8 @@ nav{
   flex-direction: column;
   /*  width: 70%;*/
   margin: 20px auto;
-  background-color: aliceblue;
+  background-color: coral;
+  border-radius: 5px;
 }
 #btnHamburger{
   font-size: 18px;
@@ -54,6 +55,7 @@ nav li{
   display: block;
 }
 nav a{
+  color: brown;
   text-align: center;
   display: block;
   padding: 15px 15px;
@@ -75,7 +77,7 @@ nav a::before {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #f00;
+  background-color: gold;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -93,6 +95,9 @@ nav a:hover::before {
 
 /* END NAV */
 
+footer{
+  text-align: center;
+}
 /* ****************************************** */
 /* ***************** PORTIFOLIO ************* */
 /* ****************************************** */
@@ -170,3 +175,4 @@ textarea{
 #Biografia p{
  text-indent: 1.5em;
 }
+
