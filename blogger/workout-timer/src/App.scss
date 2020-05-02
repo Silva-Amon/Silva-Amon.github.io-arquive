@@ -1,0 +1,58 @@
+$base-blue-color: #1f93e0;
+$base-txt-color2: #FFFFFF;
+$fontsize-txt: 14px;
+$defaultTransition: 0.5s ease;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Oswald:wght@500&display=swap');
+.appMain{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  h1{
+    font-family: 'Oswald', sans-serif;
+  }
+  >*{
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  label{
+    display: block;
+  }
+  input[type=text]{
+    width: 100%;
+    font-size: $fontsize-txt;
+    border-radius: 15px;
+    border-style: none;
+    border-bottom:0.5px solid black;
+    transition:$defaultTransition;
+    padding: 5px;
+    &:focus{
+      padding-top:10px;
+      padding-bottom:10px;
+      outline-width: 0;
+    }
+  }
+  small{
+    display:block
+  }
+  button{
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    background-color:$base-blue-color;
+    color:$base-txt-color2;
+    font-size:$fontsize-txt;
+    border-style: none;
+    transition: $defaultTransition;
+    cursor: pointer;
+    &:hover{
+      background-color: #114e77;
+    }
+  }
+  a{
+    display: block;
+    text-decoration: none;
+  }
+}
