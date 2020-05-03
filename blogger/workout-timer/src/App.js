@@ -36,7 +36,7 @@ function TimeId() {
             <div>
               <small>Time id found. Do you want do load it?</small>
               <Link to={"/timer/" + timeId}>
-                <button onClick={() => console.log(timeId)}>Load Timer</button>
+                <button className="btn-main" onClick={() => console.log(timeId)}>Load Timer</button>
               </Link>
             </div>
           )
@@ -50,7 +50,7 @@ function TimeId() {
             (
               <div>
                 <small>Time id don't found. Do you want to create one?</small>
-                <button onClick={() => createTimeId(timeId)}>Create Timer</button>
+                <button className="btn-main" onClick={() => createTimeId(timeId)}>Create Timer</button>
               </div>
             )
       }
@@ -60,7 +60,7 @@ function TimeId() {
 
 function App() {
   return (
-    <div class="appMain">
+    <div className="appMain">
       <h1>Time Workout</h1>
       <Router>
         <Switch>

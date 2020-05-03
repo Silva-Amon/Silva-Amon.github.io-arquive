@@ -1,0 +1,58 @@
+@import '../../App';
+$fontSizeTime: 50px;
+%playButton{
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-style: none;
+    font-size: 32px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition: $defaultTransition;
+    cursor: pointer;
+    outline-width: 0;
+}
+.timer{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.timeId{
+    text-decoration: underline;
+    color: rgb(68, 67, 67);
+}
+.hour{
+    font-size: $fontSizeTime;
+}
+.minute{
+    font-size: $fontSizeTime/1.2;
+}
+.second{
+    font-size: $fontSizeTime/1.6;
+}
+.play{
+    @extend %playButton;
+    background-color: rgb(71, 230, 137);
+    color: #FFF;
+    &:hover{
+        background-color: rgb(71, 230, 84);
+    }
+    &:active{
+        background-color: rgb(54, 189, 65);
+    }
+}
+.pause{
+    @extend %playButton;
+    background-color: rgb(253, 198, 45);
+    color: #FFF;
+    &:hover{
+        background-color: rgb(235, 182, 37);
+    }
+    &:active{
+        background-color: rgb(216, 167, 32);
+    }
+}
