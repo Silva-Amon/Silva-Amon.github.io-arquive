@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Silva-Amon.github.io/blogger/workout-timer/public/static/css/main.92b2a25f.chunk.css",
-    "main.js": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/main.7ad31bce.chunk.js",
-    "main.js.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/main.7ad31bce.chunk.js.map",
-    "runtime-main.js": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/runtime-main.e5ada4dc.js",
-    "runtime-main.js.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/runtime-main.e5ada4dc.js.map",
-    "static/js/2.dc5adb23.chunk.js": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/2.dc5adb23.chunk.js",
-    "static/js/2.dc5adb23.chunk.js.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/2.dc5adb23.chunk.js.map",
-    "index.html": "/Silva-Amon.github.io/blogger/workout-timer/public/index.html",
-    "precache-manifest.69a227173f43ecc5c52660d5219a3ad5.js": "/Silva-Amon.github.io/blogger/workout-timer/public/precache-manifest.69a227173f43ecc5c52660d5219a3ad5.js",
-    "service-worker.js": "/Silva-Amon.github.io/blogger/workout-timer/public/service-worker.js",
-    "static/css/main.92b2a25f.chunk.css.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/css/main.92b2a25f.chunk.css.map",
-    "static/js/2.dc5adb23.chunk.js.LICENSE.txt": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/2.dc5adb23.chunk.js.LICENSE.txt"
+    "main.css": "/blogger/workout-timer/static/css/main.92b2a25f.chunk.css",
+    "main.js": "/blogger/workout-timer/static/js/main.7ad31bce.chunk.js",
+    "main.js.map": "/blogger/workout-timer/static/js/main.7ad31bce.chunk.js.map",
+    "runtime-main.js": "/blogger/workout-timer/static/js/runtime-main.4740cb5f.js",
+    "runtime-main.js.map": "/blogger/workout-timer/static/js/runtime-main.4740cb5f.js.map",
+    "static/js/2.dc5adb23.chunk.js": "/blogger/workout-timer/static/js/2.dc5adb23.chunk.js",
+    "static/js/2.dc5adb23.chunk.js.map": "/blogger/workout-timer/static/js/2.dc5adb23.chunk.js.map",
+    "index.html": "/blogger/workout-timer/index.html",
+    "precache-manifest.2026105a37c10fd2b2066ff8c0ce32e9.js": "/blogger/workout-timer/precache-manifest.2026105a37c10fd2b2066ff8c0ce32e9.js",
+    "service-worker.js": "/blogger/workout-timer/service-worker.js",
+    "static/css/main.92b2a25f.chunk.css.map": "/blogger/workout-timer/static/css/main.92b2a25f.chunk.css.map",
+    "static/js/2.dc5adb23.chunk.js.LICENSE.txt": "/blogger/workout-timer/static/js/2.dc5adb23.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5ada4dc.js",
+    "static/js/runtime-main.4740cb5f.js",
     "static/js/2.dc5adb23.chunk.js",
     "static/css/main.92b2a25f.chunk.css",
     "static/js/main.7ad31bce.chunk.js"
