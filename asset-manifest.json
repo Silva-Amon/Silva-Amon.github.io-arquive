@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.92b2a25f.chunk.css",
-    "main.js": "./static/js/main.7ad31bce.chunk.js",
-    "main.js.map": "./static/js/main.7ad31bce.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.ea2d7c12.js",
-    "runtime-main.js.map": "./static/js/runtime-main.ea2d7c12.js.map",
-    "static/js/2.dc5adb23.chunk.js": "./static/js/2.dc5adb23.chunk.js",
-    "static/js/2.dc5adb23.chunk.js.map": "./static/js/2.dc5adb23.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.09c4a404f92ae637fcaabe6b2df2c470.js": "./precache-manifest.09c4a404f92ae637fcaabe6b2df2c470.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.92b2a25f.chunk.css.map": "./static/css/main.92b2a25f.chunk.css.map",
-    "static/js/2.dc5adb23.chunk.js.LICENSE.txt": "./static/js/2.dc5adb23.chunk.js.LICENSE.txt"
+    "main.css": "/Silva-Amon.github.io/blogger/workout-timer/public/static/css/main.92b2a25f.chunk.css",
+    "main.js": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/main.7ad31bce.chunk.js",
+    "main.js.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/main.7ad31bce.chunk.js.map",
+    "runtime-main.js": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/runtime-main.e5ada4dc.js",
+    "runtime-main.js.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/runtime-main.e5ada4dc.js.map",
+    "static/js/2.dc5adb23.chunk.js": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/2.dc5adb23.chunk.js",
+    "static/js/2.dc5adb23.chunk.js.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/2.dc5adb23.chunk.js.map",
+    "index.html": "/Silva-Amon.github.io/blogger/workout-timer/public/index.html",
+    "precache-manifest.69a227173f43ecc5c52660d5219a3ad5.js": "/Silva-Amon.github.io/blogger/workout-timer/public/precache-manifest.69a227173f43ecc5c52660d5219a3ad5.js",
+    "service-worker.js": "/Silva-Amon.github.io/blogger/workout-timer/public/service-worker.js",
+    "static/css/main.92b2a25f.chunk.css.map": "/Silva-Amon.github.io/blogger/workout-timer/public/static/css/main.92b2a25f.chunk.css.map",
+    "static/js/2.dc5adb23.chunk.js.LICENSE.txt": "/Silva-Amon.github.io/blogger/workout-timer/public/static/js/2.dc5adb23.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea2d7c12.js",
+    "static/js/runtime-main.e5ada4dc.js",
     "static/js/2.dc5adb23.chunk.js",
     "static/css/main.92b2a25f.chunk.css",
     "static/js/main.7ad31bce.chunk.js"
