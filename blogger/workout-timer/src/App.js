@@ -15,7 +15,7 @@ function TimeId() {
   const history = useHistory()
 
   function goToTimeId(timeId){
-    history.push('/timer/'+timeId)
+    history.push('/blogger/workout-timer/build/timer/'+timeId)
   }
 
   function createTimeId(timeId) {
@@ -35,7 +35,7 @@ function TimeId() {
           (
             <div>
               <small>Time id found. Do you want do load it?</small>
-              <Link to={"/timer/" + timeId}>
+              <Link to={"/blogger/workout-timer/build/timer/" + timeId}>
                 <button className="btn-main" onClick={() => console.log(timeId)}>Load Timer</button>
               </Link>
             </div>
@@ -67,7 +67,7 @@ function App() {
           <Route exact path='/'>
             <TimeId />
           </Route>
-          <Route exact path='/timer/:timeId' component={Timer} />
+          <Route exact path='/blogger/workout-timer/build/timer/:timeId' component={Timer} />
         </Switch>
       </Router>
     </div>
