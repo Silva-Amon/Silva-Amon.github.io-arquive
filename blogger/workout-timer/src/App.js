@@ -9,13 +9,13 @@ import {
   Link,
   useHistory
 } from "react-router-dom";
-
+const baseURL = '/blogger/workout-timer/build/'
 // It's setting a state called timeId, and it default value is ''
 function TimeId() {
   const history = useHistory()
 
   function goToTimeId(timeId){
-    history.push('/blogger/workout-timer/build/timer/'+timeId)
+    history.push(baseURL+'timer/'+timeId)
   }
 
   function createTimeId(timeId) {
@@ -35,7 +35,7 @@ function TimeId() {
           (
             <div>
               <small>Time id found. Do you want do load it?</small>
-              <Link to={"/blogger/workout-timer/build/timer/" + timeId}>
+              <Link to={baseURL+"timer/" + timeId}>
                 <button className="btn-main" onClick={() => console.log(timeId)}>Load Timer</button>
               </Link>
             </div>
@@ -64,10 +64,10 @@ function App() {
       <h1>Time Workout</h1>
       <Router>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path={baseURL}>
             <TimeId />
           </Route>
-          <Route exact path='/blogger/workout-timer/build/timer/:timeId' component={Timer} />
+          <Route exact path={baseURL+'timer/:timeId'} component={Timer} />
         </Switch>
       </Router>
     </div>
